@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4f9d741-f403-4dd6-a9ba-ae1aeec20efe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +33,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="D:/GitHub/Efficient Courier Tracking System/tracker.py" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -102,7 +101,21 @@
       <option name="project" value="LOCAL" />
       <updated>1583583175806</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added login css">
+      <created>1583583358274</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1583583358274</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added login css">
+      <created>1583583428012</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1583583428012</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -115,15 +128,19 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="428" y="0" key="#app/0.0.1536.824@0.0.1536.824" timestamp="1583583401575" />
-    <state x="394" y="0" key="CommitChangelistDialog2" timestamp="1583583363760">
+    <state x="394" y="0" key="CommitChangelistDialog2" timestamp="1583583426733">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="350" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1583578685180" />
-    <state x="394" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583583363760" />
-    <state x="883" y="113" key="FileChooserDialogImpl" timestamp="1583583345511">
+    <state x="394" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583583426733" />
+    <state x="883" y="113" key="FileChooserDialogImpl" timestamp="1583583556604">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="883" y="113" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1583583345511" />
+    <state x="883" y="113" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1583583556604" />
+    <state x="149" y="0" key="SettingsEditor" timestamp="1583583601024">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="149" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1583583601024" />
     <state x="494" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583577928411">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
