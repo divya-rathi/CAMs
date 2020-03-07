@@ -3,12 +3,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Login</title>
-    <link rel="stylesheet" type= "text/css" href="{{ url_for('static/css', filename='bulma.css') }}">
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/bulma.css') }}">
 </head>
 <body>
 <form action="/login" method="POST">
-<div class="has-text-centered " style="margin:auto;
-top: 50%; left: 50%;">
+<div class="has-text-centered " style="margin:auto; top: 50%; left: 50%;">
 <h1>Login</h1>
     <div class="field">
                                 <div class="control">
@@ -25,7 +24,7 @@ top: 50%; left: 50%;">
                 <input type="radio" name="choice" value="user" checked>User<br><br>
                 <input type="radio" name="choice" value="admin">Admin
             </div>
-<input type="submit" value="Log in" class="button is-dark is-block is-info is-large is-fullwidth">
+<input type="submit" value="Log in" class="button is-dark is-block is-info is-large is-centered">
 </div>
 </form>
 </body>
