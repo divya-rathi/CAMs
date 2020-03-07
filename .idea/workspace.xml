@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4f9d741-f403-4dd6-a9ba-ae1aeec20efe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/css/bulma.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/bulma.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/bulma.min.css" afterDir="false" />
+    <list default="true" id="e4f9d741-f403-4dd6-a9ba-ae1aeec20efe" name="Default Changelist" comment="css">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +13,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -31,9 +29,16 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/static" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rathi\Desktop\Python Flask Project\CAMs\static" />
+      <recent name="C:\Users\rathi\Desktop\Python Flask Project\CAMs\static\css" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -46,13 +51,32 @@
       <option name="presentableId" value="Default" />
       <updated>1583570724979</updated>
     </task>
+    <task id="LOCAL-00001" summary="css">
+      <created>1583577895960</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583577895960</updated>
+    </task>
+    <task id="LOCAL-00002" summary="css">
+      <created>1583577942916</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1583577942916</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="css" />
+    <option name="LAST_COMMIT_MESSAGE" value="css" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="350" y="0" key="CommitChangelistDialog2" timestamp="1583577914303">
+    <state x="350" y="0" key="CommitChangelistDialog2" timestamp="1583578685180">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="350" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1583577914303" />
+    <state x="350" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1583578685180" />
     <state x="494" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583577928411">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
