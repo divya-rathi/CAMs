@@ -1,16 +1,47 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Aladin&display=swap');
-body,html{
-  height: 100%;
-  margin: 20px;
+body{
+    background-image: url('../images/background_image_hogwarts3.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    overflow-x:hidden;
 }
-.bg{
-background-image: url('../images/background_image_hogwarts3.jpg');
-min-height: 380px;
+input {
+    padding: 8px;
+    height: 36px;
+    width: 260px;
+    margin-top: 20px;
+    font-size: 18px;
+}
+button {
+    height: 30px;
+    width: 160px;
+    margin-top: 45px;
+    background-color: 0088ce;
+    color: #ffffff;
+    padding: 6px 10px;
+    font-size: 14px;
+    line-height: 1.3333333;
+    border-radius: 1px;
+    border: 1px solid transparent;
+}
+button:hover{
+    background-color: #057dbb;
+    background-image: none;
+    border-color: #00659c;
+    color: #fff;
+}
 
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+nav{
+    height: 40px;
+    background: #ffffff;
+}
+.block{
+    padding-top: 16px;
+    margin-top: 80px;
+    height: 320px;
+    width: 320px;
+    background: #ffffff;
+    margin-left: 40%;
+}
+.register{
+    margin-top: 7px;
 }
