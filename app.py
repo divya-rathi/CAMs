@@ -9,7 +9,7 @@ def home():
     return render_template('login.html')
 
 @app.route('/login', methods=['POST'])
-def do_admin_login():
+def login():
     '''
     global active
     global email
