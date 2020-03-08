@@ -4,31 +4,27 @@ import os
 
 app = Flask(__name__)
 
+#Firebase
+from firebase import firebase
+firebase = firebase.FirebaseApplication('https://cams-da440.firebaseio.com/', None)
+crendentials = firebase.get('/credentials', None)
+
 @app.route('/')
 def home():
     return render_template('login.html')
 
 @app.route('/login', methods=['POST'])
 def do_admin_login():
-    '''
-    global active
-    global email
-    if request.form['choice'] == 'user':
-        if request.form['username'] in user and user[request.form['username']] == request.form['password']:
-            active = request.form['username']
-            session['logged_in'] = True
-        else:
-            return redirect('/error')
-        return render_template('home.html',email=active)
+    temp = -1
+    username = request.form['uname']
+    password = request.form['pass']
+    for i in crendentials:
+        if username in crendentials[i]['username'] and password in crendentials[i]['password']:
+            temp += 1
+            return "Logged In"
+    if temp == -1:
+        return "Invalid"
 
-    elif request.form['choice'] == 'admin':
-        if request.form['username'] in admin and admin[request.form['username']] == request.form['password']:
-            active = request.form['username']
-            session['logged_in'] = True
-        else:
-            return redirect('/error')
-        return render_template('home.html',email=active)
-'''
 @app.route('/error')
 def err():
     flash("Wrong password entered")
