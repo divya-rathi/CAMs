@@ -4,32 +4,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/main.css') }}">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <title>Login</title>
 </head>
 <body>
-<div class = "bg"></div>
-<form action="/login" method="POST">
-<div class="has-text-centered " style="margin:auto; top: 50%; left: 50%;">
-<h1>Login</h1>
-    <div class="field">
-                                <div class="control">
-    <input type="text" class = "input is-large"value="" placeholder="username" name="username">
-                                </div>
+<nav>
+    <p class="has-text-centered">Navbar here</p>
+</nav>
+<div class="has-text-centered block">
+<form action="http://127.0.0.1:5000/login" method="POST">
+    <h2 class="is-size-2">LOGIN</h2>
+    <input type="email" placeholder="Email Id" required>
+    <input type="password" placeholder="Password" required>
+    <div ></div>
+    <button type="submit">LOGIN</button>
+    <div class="register">
+        <p>Need an account? <a href="#">Sign up</a></p>
     </div>
-
-    <div class="field">
-                                <div class="control">
-    <input type="password" class="input is-large" value="" placeholder="password" name="password">
-                                </div>
-    </div>
-<div style="padding-left: 100px;">
-                <input type="radio" name="choice" value="user" checked>User<br><br>
-                <input type="radio" name="choice" value="admin">Admin
-            </div>
-<input type="submit" value="Log in" class="button is-dark is-block is-info is-large is-centered">
-</div>
 </form>
-
+</div>
 </body>
 </html>
