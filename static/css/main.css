@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Aladin&display=swap');
+body,html{
+  height: 100%;
+  margin: 20px;
+}
+.bg{
+background-image: url('../images/background_image_hogwarts3.jpg');
+min-height: 380px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
