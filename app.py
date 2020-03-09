@@ -9,6 +9,7 @@ from firebase import firebase
 firebase = firebase.FirebaseApplication('https://cams-da440.firebaseio.com/', None)
 crendentials = firebase.get('/credentials', None)
 
+
 @app.route('/')
 def home():
     return render_template('login.html')
@@ -21,6 +22,7 @@ def do_admin_login():
     for i in crendentials:
         if username in crendentials[i]['username'] and password in crendentials[i]['password']:
             temp += 1
+            session['logged in'] = True
             return "Logged In"
     if temp == -1:
         return "Invalid"
