@@ -4,21 +4,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/main.css') }}">
-    <title>CAMs--Login</title>
+    <title>CAMs--Register</title>
 </head>
 <body>
 <nav>
     <p class="has-text-centered">Navbar here</p>
 </nav>
 <div class="has-text-centered block">
-<form action="http://127.0.0.1:5000/login" method="POST">
-    <h2 class="is-size-2">LOGIN</h2>
+<form action="http://127.0.0.1:5000/register" method="POST">
+    <h2 class="is-size-2">SIGN UP HERE</h2>
     <input type="text" placeholder="Username" name="uname" required>
     <input type="password" placeholder="Password" name="pass" required>
     <div ></div>
-    <button type="submit">LOGIN</button>
-    <div class="register">
-        <p>Need an account? <a href="register">Sign up</a></p>
+    <button type="submit">REGISTER</button>
+    <div class="login">
+        <p>Go back to login page<a href="login">Login</a></p>
     </div>
 </form>
 </div>

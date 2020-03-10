@@ -15,17 +15,21 @@ def home():
     return render_template('login.html')
 
 @app.route('/login', methods=['POST'])
-def do_admin_login():
+def do_login():
     temp = -1
     username = request.form['uname']
     password = request.form['pass']
     for i in crendentials:
         if username in crendentials[i]['username'] and password in crendentials[i]['password']:
             temp += 1
-            session['logged in'] = True
+            session['logged_in'] = True
             return "Logged In"
     if temp == -1:
         return "Invalid"
+
+@app.route('/register',methods=['POST'])
+def do_register(): ##HAVE TO FINISH
+    return render_template('login.html')
 
 @app.route('/error')
 def err():
