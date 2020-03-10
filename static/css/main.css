@@ -15,6 +15,7 @@ button {
     height: 30px;
     width: 160px;
     margin-top: 40px;
+    margin-bottom: 7px;
     background-color: 0088ce;
     color: #ffffff;
     padding: 6px 10px;
@@ -42,6 +43,6 @@ nav{
     background: #ffffff;
     margin-left: 40%;
 }
-.register{
+.register .login{
     margin-top: 7px;
 }

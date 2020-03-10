@@ -1,5 +1,5 @@
 from flask import Flask
-from flask import Flask, flash, redirect, render_template, request, session, abort
+from flask import *     #Flask, flash, redirect, render_template, request, session, abort
 import os
 import pyrebase
 
@@ -44,18 +44,18 @@ def login():
 
 
 @app.route('/register',methods=['POST', 'GET'])
-def register(): ##HAVE TO FINISH
-    return render_template('register.html')
-
-    '''username = request.form['uname']
-    password = request.form['pass']
-    print(username)
-    print(password)
-    if(request.form['submit']  == ' register'):
-        #Update db command -->db.
+def register():
+    if request.method =='POST':
+        username = request.form['uname']
+        password = request.form['pass']
+        print(username)
+        print(password)
+        db.child("credentials").push({"username": username, "password": password})
+        global crendentials
+        crendentials = firebase.get('/credentials', None)
         flash('Successfully Registered:) Go ahead and login')
-    return render_template('login.html')
-    '''
+        return render_template('register.html')
+    return render_template('register.html')
 
 @app.route('/error')
 def err():
