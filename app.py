@@ -38,9 +38,9 @@ def login():
             session['logged_in'] = True
             active = username
             if active == 'kaviya':  ##admin
-                return render_template('home_admin.html')
+                return render_template('home_admin.html', u = active)
             else:
-                return render_template('home_user.html')
+                return render_template('home_user.html', u = active)
 
     if temp == -1:
         return render_template('login.html', msg = "Invalid Credentials")
