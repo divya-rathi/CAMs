@@ -10,6 +10,13 @@
 <nav>
     <p class="has-text-centered">Navbar here</p>
 </nav>
+{% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <h3 style="color:white";>{{ message }}</h3>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
 <div class="has-text-centered block">
 <form action="http://127.0.0.1:5000/register" method="POST">
     <h2 class="is-size-2">SIGN UP HERE</h2>
@@ -19,16 +26,7 @@
     <b>{{msg}}</b>
     <br />
     <button type="submit" name="register">REGISTER</button>
-    {% with messages = get_flashed_messages() %}
-        {% if messages %}
-            {% for message in messages %}
-                <h3>{{ message }}</h3>
-            {% endfor %}
-        {% endif %}
-    {% endwith %}
-    <div class="login">
         <p>Go back to login page <a href="{{url_for('home')}}">Log in</a></p>
-    </div>
 </form>
 </div>
 </body>
