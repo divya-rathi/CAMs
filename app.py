@@ -1,6 +1,18 @@
 from flask import Flask
 from flask import Flask, flash, redirect, render_template, request, session, abort
 import os
+import pyrebase
+
+config = {
+    "apiKey" : "AIzaSyAIsSHOuNkfoGuUrJ5xQM2t6jNVT5TlHx8",
+    "authDomain" : "cams-da440.firebaseapp.com",
+    "databaseURL" : "https://cams-da440.firebaseio.com",
+    "projectId" : "cams-da440",
+    "storageBucket" : "cams-da440.appspot.com",
+    "messagingSenderId" : "592415369968"
+}
+firebase = pyrebase.initialize_app(config)
+db = firebase.database()
 
 app = Flask(__name__)
 
@@ -9,6 +21,7 @@ from firebase import firebase
 firebase = firebase.FirebaseApplication('https://cams-da440.firebaseio.com/', None)
 crendentials = firebase.get('/credentials', None)
 
+global active
 
 @app.route('/')
 def home():
@@ -16,6 +29,7 @@ def home():
 
 @app.route('/login', methods=['POST'])
 def do_login():
+    global active
     temp = -1
     username = request.form['uname']
     password = request.form['pass']
@@ -23,12 +37,18 @@ def do_login():
         if username in crendentials[i]['username'] and password in crendentials[i]['password']:
             temp += 1
             session['logged_in'] = True
+            active = username
             return "Logged In"
     if temp == -1:
         return "Invalid"
 
 @app.route('/register',methods=['POST'])
 def do_register(): ##HAVE TO FINISH
+    username = request.form['uname']
+    password = request.form['pass']
+    if(request.form['submit']  == ' register'):
+        #Update db command -->db.
+        flash('Successfully Registered:) Go ahead and login')
     return render_template('login.html')
 
 @app.route('/error')
