@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4f9d741-f403-4dd6-a9ba-ae1aeec20efe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/firebase_code.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CAMs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CAMs.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firebase_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/firebase_code.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +37,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/amrita sem/sem 6/Open Lab/Lab/Online Turf Booking System_17416" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -48,7 +49,7 @@
       <recent name="C:\Users\rathi\Desktop\Python Flask Project\CAMs\static\css" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.firebase_code">
     <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CAMs" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -70,8 +71,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="firebase_code" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CAMs" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/firebase_code.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.firebase_code" />
         <item itemvalue="Python.app" />
       </list>
     </recent_temporary>
@@ -143,7 +166,28 @@
       <option name="project" value="LOCAL" />
       <updated>1583591509121</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="connected firebase">
+      <created>1583687453960</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1583687453960</updated>
+    </task>
+    <task id="LOCAL-00010" summary="connected firebase">
+      <created>1583687497352</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1583687497352</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fixed error with html page">
+      <created>1583687621816</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1583687621816</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -151,42 +195,44 @@
     <MESSAGE value="Added login css" />
     <MESSAGE value="Added login page" />
     <MESSAGE value="css changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="css changed" />
+    <MESSAGE value="connected firebase" />
+    <MESSAGE value="fixed error with html page" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed error with html page" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="0" key="#app" timestamp="1583583401575">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="428" y="0" key="#app/0.0.1536.824@0.0.1536.824" timestamp="1583583401575" />
-    <state x="350" y="0" key="CommitChangelistDialog2" timestamp="1583687496387">
+    <state x="350" y="0" key="CommitChangelistDialog2" timestamp="1583687620913">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="350" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1583687496387" />
+    <state x="350" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1583687620913" />
     <state x="394" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583587784046" />
-    <state x="785" y="100" key="FileChooserDialogImpl" timestamp="1583682146608">
+    <state x="785" y="100" key="FileChooserDialogImpl" timestamp="1583843173129">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="785" y="100" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1583682146608" />
+    <state x="785" y="100" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1583843173129" />
     <state x="883" y="113" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1583585719560" />
-    <state width="1345" height="179" key="GridCell.Tab.0.bottom" timestamp="1583687570174">
+    <state width="1345" height="179" key="GridCell.Tab.0.bottom" timestamp="1583844730655">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583687570174" />
+    <state width="1345" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583844730655" />
     <state width="1509" height="196" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583587090976" />
-    <state width="1345" height="179" key="GridCell.Tab.0.center" timestamp="1583687570173">
+    <state width="1345" height="179" key="GridCell.Tab.0.center" timestamp="1583844730655">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1583687570173" />
+    <state width="1345" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1583844730655" />
     <state width="1509" height="196" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583587090976" />
-    <state width="1345" height="179" key="GridCell.Tab.0.left" timestamp="1583687570173">
+    <state width="1345" height="179" key="GridCell.Tab.0.left" timestamp="1583844730655">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1583687570173" />
+    <state width="1345" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1583844730655" />
     <state width="1509" height="196" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583587090976" />
-    <state width="1345" height="179" key="GridCell.Tab.0.right" timestamp="1583687570174">
+    <state width="1345" height="179" key="GridCell.Tab.0.right" timestamp="1583844730655">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583687570174" />
+    <state width="1345" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583844730655" />
     <state width="1509" height="196" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583587090976" />
     <state width="1509" height="244" key="GridCell.Tab.1.bottom" timestamp="1583586380740">
       <screen x="0" y="0" width="1536" height="824" />
@@ -209,14 +255,14 @@
     </state>
     <state x="133" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1583687363680" />
     <state x="149" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1583583601024" />
-    <state x="232" y="73" key="Vcs.Push.Dialog.v2" timestamp="1583687508489">
+    <state x="232" y="73" key="Vcs.Push.Dialog.v2" timestamp="1583687631286">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="232" y="73" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1583687508489" />
+    <state x="232" y="73" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1583687631286" />
     <state x="261" y="83" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1583587483322" />
-    <state x="494" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583591488656">
+    <state x="494" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583842756971">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="494" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1583591488656" />
+    <state x="494" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1583842756971" />
   </component>
 </project>

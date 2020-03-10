@@ -14,7 +14,7 @@ input {
 button {
     height: 30px;
     width: 160px;
-    margin-top: 45px;
+    margin-top: 40px;
     background-color: 0088ce;
     color: #ffffff;
     padding: 6px 10px;
@@ -37,7 +37,7 @@ nav{
 .block{
     padding-top: 16px;
     margin-top: 80px;
-    height: 320px;
+    height: 340px;
     width: 320px;
     background: #ffffff;
     margin-left: 40%;

@@ -15,10 +15,12 @@
     <h2 class="is-size-2">LOGIN</h2>
     <input type="text" placeholder="Username" name="uname" required>
     <input type="password" placeholder="Password" name="pass" required>
-    <div ></div>
+    <br />
+    <b>{{msg}}</b>
+    <br />
     <button type="submit">LOGIN</button>
     <div class="register">
-        <p>Need an account? <a href="register">Sign up</a></p>
+        <p>Need an account? <a href="{{url_for('register')}}">Sign up</a></p>
     </div>
 </form>
 </div>

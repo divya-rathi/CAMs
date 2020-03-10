@@ -23,12 +23,12 @@ crendentials = firebase.get('/credentials', None)
 
 global active
 
-@app.route('/')
+@app.route('/', methods=['POST', 'GET'])
 def home():
     return render_template('login.html')
 
-@app.route('/login', methods=['POST'])
-def do_login():
+@app.route('/login', methods=['POST', 'GET'])
+def login():
     global active
     temp = -1
     username = request.form['uname']
@@ -40,16 +40,22 @@ def do_login():
             active = username
             return "Logged In"
     if temp == -1:
-        return "Invalid"
+        return render_template('login.html', msg = "Invalid Credentials")
 
-@app.route('/register',methods=['POST'])
-def do_register(): ##HAVE TO FINISH
-    username = request.form['uname']
+
+@app.route('/register',methods=['POST', 'GET'])
+def register(): ##HAVE TO FINISH
+    return render_template('register.html')
+
+    '''username = request.form['uname']
     password = request.form['pass']
+    print(username)
+    print(password)
     if(request.form['submit']  == ' register'):
         #Update db command -->db.
         flash('Successfully Registered:) Go ahead and login')
     return render_template('login.html')
+    '''
 
 @app.route('/error')
 def err():
