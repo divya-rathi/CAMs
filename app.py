@@ -16,12 +16,11 @@ db = firebase.database()
 
 app = Flask(__name__)
 
+global active,credentials
 #Firebase
 from firebase import firebase
 firebase = firebase.FirebaseApplication('https://cams-da440.firebaseio.com/', None)
 crendentials = firebase.get('/credentials', None)
-
-global active
 
 @app.route('/', methods=['POST', 'GET'])
 def home():
@@ -38,7 +37,11 @@ def login():
             temp += 1
             session['logged_in'] = True
             active = username
-            return "Logged In"
+            if active == 'kaviya':  ##admin
+                return render_template('home_admin.html')
+            else:
+                return render_template('home_user.html')
+
     if temp == -1:
         return render_template('login.html', msg = "Invalid Credentials")
 
@@ -48,14 +51,16 @@ def register():
     if request.method =='POST':
         username = request.form['uname']
         password = request.form['pass']
-        print(username)
-        print(password)
+        print("Registered user credentials")
+        print("Username: ",username)
+        print("Password: ",password)
         db.child("credentials").push({"username": username, "password": password})
         global crendentials
         crendentials = firebase.get('/credentials', None)
         flash('Successfully Registered:) Go ahead and login')
         return render_template('register.html')
     return render_template('register.html')
+
 
 @app.route('/error')
 def err():
