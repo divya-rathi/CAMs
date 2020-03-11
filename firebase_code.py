@@ -10,6 +10,6 @@ config = {
 }
 firebase = pyrebase.initialize_app(config)
 db = firebase.database()
-#db.child("credentials").push({"username":"kaviya", "password": "senthil"})
+db.child("credentials").push({"username":"kaviya@gmail.com", "password": "senthil"})
 #db.child("seats").push(({"branch":"elec sci","no_of_seats":"45"}))
 
