@@ -50,15 +50,20 @@ def login():
 def register():
     if request.method =='POST':
         username = request.form['uname']
-        password = request.form['pass']
-        print("Registered user credentials")
-        print("Username: ",username)
-        print("Password: ",password)
-        db.child("credentials").push({"username": username, "password": password})
-        global crendentials
-        crendentials = firebase.get('/credentials', None)
-        flash('Successfully Registered:) Go ahead and login')
-        return render_template('register.html')
+        password = request.form['pass']   ## DO IT here
+        for i in credentials:
+            if username in credentials[i]['username']:
+                flash('Username already exits :/ ')
+                return render_template('register.html')
+        else:
+            print("Registered user credentials")
+            print("Username: ",username)
+            print("Password: ",password)
+            db.child("credentials").push({"username": username, "password": password})
+            global crendentials
+            crendentials = firebase.get('/credentials', None)
+            flash('Successfully Registered:) Go ahead and login')
+            return render_template('register.html')
     return render_template('register.html')
 
 
