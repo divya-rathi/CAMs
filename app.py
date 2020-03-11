@@ -20,7 +20,7 @@ global active,credentials
 #Firebase
 from firebase import firebase
 firebase = firebase.FirebaseApplication('https://cams-da440.firebaseio.com/', None)
-crendentials = firebase.get('/credentials', None)
+credentials = firebase.get('/credentials', None)
 
 @app.route('/', methods=['POST', 'GET'])
 def home():
@@ -32,8 +32,8 @@ def login():
     temp = -1
     username = request.form['uname']
     password = request.form['pass']
-    for i in crendentials:
-        if username in crendentials[i]['username'] and password in crendentials[i]['password']:
+    for i in credentials:
+        if username in credentials[i]['username'] and password in credentials[i]['password']:
             temp += 1
             session['logged_in'] = True
             active = username
@@ -53,7 +53,7 @@ def register():
         password = request.form['pass']   ## DO IT here
         for i in credentials:
             if username in credentials[i]['username']:
-                flash('Username already exits :/ ')
+                flash('User with this email already exits :/ ')
                 return render_template('register.html')
         else:
             print("Registered user credentials")
