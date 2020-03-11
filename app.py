@@ -24,26 +24,29 @@ credentials = firebase.get('/credentials', None)
 
 @app.route('/', methods=['POST', 'GET'])
 def home():
-    return render_template('login.html')
+    return render_template('home.html')
 
 @app.route('/login', methods=['POST', 'GET'])
 def login():
-    global active
-    temp = -1
-    username = request.form['uname']
-    password = request.form['pass']
-    for i in credentials:
-        if username in credentials[i]['username'] and password in credentials[i]['password']:
-            temp += 1
-            session['logged_in'] = True
-            active = username
-            if active == 'kaviya@gmail.com':  ##admin
-                return render_template('home_admin.html', u = active)
-            else:
-                return render_template('home_user.html', u = active)
+    if request.form == 'POST':
+        global active
+        temp = -1
+        username = request.form['uname']
+        password = request.form['pass']
+        for i in credentials:
+            if username in credentials[i]['username'] and password in credentials[i]['password']:
+                temp += 1
+                session['logged_in'] = True
+                active = username
+                if active == 'kaviya@gmail.com':  ##admin
+                    return render_template('home_admin.html', u = active)
+                else:
+                    return render_template('home_user.html', u = active)
 
-    if temp == -1:
-        return render_template('login.html', msg = "Invalid Credentials")
+        if temp == -1:
+            return render_template('login.html', msg = "Invalid Credentials")
+    else:
+        return render_template('login.html')
 
 
 @app.route('/register',methods=['POST', 'GET'])
