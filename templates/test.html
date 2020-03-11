@@ -4,9 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>CAMs--Home</title>
 
-<!------ Include the above in your HEAD tag ---------->
 </head>
 <body>
  <div class="tabs is-toggle is-fullwidth">
@@ -24,13 +24,13 @@
       </a>
     </li>
     <li>
-      <a>
+      <a href="#videos">
         <span class="icon is-small"><i class="fas fa-film" aria-hidden="true"></i></span>
         <span>Videos</span>
       </a>
     </li>
     <li>
-      <a>
+      <a href="#documents">
         <span class="icon is-small"><i class="far fa-file-alt" aria-hidden="true"></i></span>
         <span>Documents</span>
       </a>
@@ -43,7 +43,7 @@
 <script>
 $(function() {
       $( 'ul.nav li' ).on( 'click', function() {
-            $( this ).parent().find( 'li.active' ).removeClass( 'active' );
+            $( this ).parent().find( 'li.is-active' ).removeClass( 'is-active' );
             $( this ).addClass( 'is-active' );
       });
 });
