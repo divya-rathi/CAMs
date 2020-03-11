@@ -1,7 +1,11 @@
 # CAMs
-Python Flask Application  
+Web application built with python flask 
 
-## Using firebase for deployment
+## Used Packages
++ Flask
++ Pyrebase4
++ Firebase
++ sseclient
 
 # Online College Admission Management System Project
 
