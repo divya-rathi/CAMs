@@ -1,0 +1,44 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>CAMs--APPLICATION_FORM</title>
+</head>
+<body class="bg">
+<nav>
+    <p class="has-text-centered">Navbar here</p>
+</nav>
+<div class="has-text-centered block">
+<form action="http://127.0.0.1:5000/application" method="POST">
+    <h2 class="is-size-2">APPLICATION_FORM</h2>
+	<input type="text" placeholder="Name" name="name" required><br>
+	<input type="number" placeholder="phone number" name="phno" required><br>
+    <input type="date" placeholder="DOB" name="dob" required><br>
+    <input type="email" placeholder="Email Id" name="email" required><br>
+
+
+	<select id="cars">
+		<option value="">--Choose a Branch--</option>
+		<option value="cse">CSE</option>
+		<option value="eee">EEE</option>
+		<option value="mech">Mech</option>
+		<option value="civil">Civil</option>
+		<option value="ece">ECE</option>
+	</select><br>
+	
+	<input type="number" placeholder="12th %" name="12th" required><br>
+	<input type="number" placeholder="10th CGPA" name="cgpa10" required><br>
+
+
+
+    <br />
+    <b>{{msg}}</b>
+    <br />
+    <button type="submit">APPLY</button>
+
+</form>
+</div>
+</body>
+</html>
