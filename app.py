@@ -34,7 +34,7 @@ def login():
         username = request.form['uname']
         password = request.form['pass']
         for i in credentials:
-            if username in credentials[i]['username'] and password in credentials[i]['password']:
+            if username in credentials[i]['EmailId'] and password in credentials[i]['Password']:
                 temp += 1
                 session['logged_in'] = True
                 active = username
@@ -55,14 +55,22 @@ def register():
         username = request.form['uname']
         password = request.form['pass']   ## DO IT here
         for i in credentials:
-            if username in credentials[i]['username']:
+            if username in credentials[i]['EmailId']:
                 flash('User with this email already exits :/ ')
                 return render_template('register.html')
         else:
             print("Registered user credentials")
             print("Username: ",username)
             print("Password: ",password)
-            db.child("credentials").push({"username": username, "password": password})
+            lenOfCred = len(credentials)
+            userId = "CAMS"
+            if lenOfCred <= 9:
+                k = "000" +str(lenOfCred+1)
+            elif lenOfCred >= 10 and lenOfCred <= 99:
+                k = "00" +str(lenOfCred+1)
+            elif lenOfCred >=100 and  lenOfCred <= 999:
+                k = "0" + str(lenOfCred+1)
+            db.child("credentials").child(userId + k).push({"EmailId": username, "Password": password})
             global crendentials
             crendentials = firebase.get('/credentials', None)
             flash('Successfully Registered:) Go ahead and login')
