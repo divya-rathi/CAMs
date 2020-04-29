@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
@@ -93,12 +94,52 @@ table, th, td {
   font-size: 50px;
   font-family: "verdana";
 }
+nav {
+    height: 60px;
+    width : 100%;
+    position: fixed;
+    top: 0;
+    padding: 10px;
+    border-bottom: 1px solid #d4c7c7;
+    box-shadow: 2px 0.5px #ccc;
+}
+
+.container{
+    margin-top: 80px;
+}
+.name{
+    margin-left: 20px;
+}
+nav li{
+    list-style-type: none;
+    display: inline;
+    font-size: 24px;
+}
+.right{
+    float: right;
+}
+a:hover{
+    text-decoration: none;
+}
+.right li a{
+    padding: 10px;
+    color: black;
+}
+.right li a:hover{
+    text-shadow: 0.5px 1.5px #ccc;
+}
 
 </style>
 <body>
 <nav>
-    <h2 style="text-align:right;"><a href="{{url_for('login')}}">Login</a></h2>
+
+<li class="name">CAMs</li>
+<div class="right">
+<li><a href="{{url_for('login')}}"><i class="fa  fa-support"></i>Support</a></li>
+<li><a href="{{url_for('login')}}"><i class="fa  fa-sign-in"></i>Login</a></li>
+</div>
 </nav>
+
 <div class="container">
   <h2>Admissions Open for 2020!</h2>
   <br />

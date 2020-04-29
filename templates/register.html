@@ -63,7 +63,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   <div class="container">
     <div class="topnav">
       <a href="{{url_for('home')}}">Home</a>
-      <a href="{{url_for('application')}}">Apply</a>
+      <a href="#apply">Apply</a>
       <a href="#contact">Contact</a>
       <a href="#about">About</a>
     </div>
@@ -88,7 +88,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
     <b>{{msg}}</b>
     <br />
     <button type="submit" name="register">REGISTER</button>
-        <p>Go back to login page <a href="{{url_for('home')}}">Log in</a></p>
+        <p>Go back to login page <a href="{{url_for('login')}}">Log in</a></p>
 </form>
 </div>
 </body>

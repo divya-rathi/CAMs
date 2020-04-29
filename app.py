@@ -78,7 +78,6 @@ def register():
             return render_template('register.html')
     return render_template('register.html')
 
-
 @app.route('/home_admin',methods=['POST','GET '])
 def home_admin():
     if request.method == 'POST':
