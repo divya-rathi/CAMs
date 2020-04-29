@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4f9d741-f403-4dd6-a9ba-ae1aeec20efe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="f1b9f53f-5f13-430e-a6fd-5b27a7d90a01" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -284,7 +283,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588160593157</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Tab content">
+      <created>1588167401975</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1588167401975</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -305,17 +311,18 @@
     <MESSAGE value="Home page tabs and tab content for cut off" />
     <MESSAGE value="Header" />
     <MESSAGE value="Updated app.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated app.py" />
+    <MESSAGE value="Tab content" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tab content" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="0" key="#app" timestamp="1583583401575">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="428" y="0" key="#app/0.0.1536.824@0.0.1536.824" timestamp="1583583401575" />
-    <state x="350" y="0" key="CommitChangelistDialog2" timestamp="1588160591974">
+    <state x="350" y="0" key="CommitChangelistDialog2" timestamp="1588167401129">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="350" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1588160591974" />
+    <state x="350" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1588167401129" />
     <state x="350" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1584540201242" />
     <state x="394" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583587784046" />
     <state x="785" y="100" key="FileChooserDialogImpl" timestamp="1588147669105">
@@ -376,10 +383,10 @@
     </state>
     <state x="133" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1583687363680" />
     <state x="149" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1583583601024" />
-    <state x="232" y="73" key="Vcs.Push.Dialog.v2" timestamp="1588160638650">
+    <state x="232" y="73" key="Vcs.Push.Dialog.v2" timestamp="1588167412929">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="232" y="73" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1588160638650" />
+    <state x="232" y="73" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1588167412929" />
     <state x="232" y="77" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1584540210554" />
     <state x="261" y="83" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1583587483322" />
     <state x="494" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588167322119">
