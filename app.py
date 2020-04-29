@@ -39,7 +39,7 @@ def login():
                 temp += 1
                 session['logged_in'] = True
                 active = username
-                if active == 'kaviya@gmail.com':  ##admin
+                if active == 'admin@gmail.com':  ##admin
                     return render_template('home_admin.html', u = active)
                 else:
                     return render_template('home_user.html', u = active)
@@ -78,6 +78,19 @@ def register():
             return render_template('register.html')
     return render_template('register.html')
 
+
+@app.route('/home_admin',methods=['POST','GET '])
+def home_admin():
+    if request.method == 'POST':
+        choose = request.form['tab']
+        if choose == 'Add College Details':
+            print('works')
+        if choose == 'Register Students':
+            print('works')
+        if choose == 'View Selected Students List':
+            print('works')
+        if choose == 'Add Cut-Offs List':
+            print('works')
 
 @app.route('/error')
 def err():
