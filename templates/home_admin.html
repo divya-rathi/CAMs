@@ -2,9 +2,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/main.css') }}">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/main.css') }}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
     <title>CAMs--Home</title>
 </head>
 <body>
@@ -14,33 +16,54 @@
 <div class="has-text-left "><h2 class="is-size-2" style="color:white;">Welcome {{u}} :)</h2>
 </div>
 <div class="tabs is-toggle is-fullwidth">
-  <ul class="nav">
+  <ul class="nav nav-tabs">
     <li class="is-active">
-      <a href="#pictures">
+      <a data-toggle="tab" href="#Addcollege">
         <span class="icon is-small"><i class="fas fa-image" aria-hidden="true"></i></span>
-        <span>Pictures</span>
+        <span>Add College</span>
       </a>
     </li>
     <li>
-      <a href="#music">
+      <a data-toggle="tab" href="#RegStud">
         <span class="icon is-small"><i class="fas fa-music" aria-hidden="true"></i></span>
-        <span>Music</span>
+        <span>Register Student</span>
       </a>
     </li>
     <li>
-      <a href="#videos">
+      <a data-toggle="tab" href="#view">
         <span class="icon is-small"><i class="fas fa-film" aria-hidden="true"></i></span>
-        <span>Videos</span>
+        <span>View Final List</span>
       </a>
     </li>
     <li>
-      <a href="#documents">
+        <a data-toggle="tab" href="#cutoff">
         <span class="icon is-small"><i class="far fa-file-alt" aria-hidden="true"></i></span>
-        <span>Documents</span>
+        <span>CutOff Details</span>
       </a>
     </li>
   </ul>
+<div class="tab-content">
+  <div id="Addcollege" class="tab-pane fade in active">
+    <h3>Add College</h3>
+    <p>Some content.</p>
+  </div>
+  <div id="RegStud" class="tab-pane fade">
+    <h3>Register Student</h3>
+    <p>Some content reg</p>
+  </div>
+  <div id="view" class="tab-pane fade">
+    <h3>View Final List</h3>
+    <p>Some content in menu 2.</p>
+  </div>
+     <div class="tab-pane fade" id="cutoff">
+    <h3>CutOff Details</h3>
+    <p>Some content in menu 3.</p>
+  </div>
 </div>
+
+</div>
+</div>
+
 </div>
 </body>
 </html>
