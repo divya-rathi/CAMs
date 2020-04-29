@@ -21,10 +21,11 @@ global active,credentials
 from firebase import firebase
 firebase = firebase.FirebaseApplication('https://cams-da440.firebaseio.com/', None)
 credentials = firebase.get('/credentials', None)
+cutoff = firebase.get('/Cutoff', None)
 
 @app.route('/', methods=['POST', 'GET'])
 def home():
-    return render_template('home.html')
+    return render_template('home.html', cf = cutoff)
 
 @app.route('/login', methods=['POST', 'GET'])
 def login():
