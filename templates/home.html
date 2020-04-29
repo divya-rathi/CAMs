@@ -94,23 +94,26 @@ table, th, td {
   font-size: 50px;
   font-family: "verdana";
 }
-nav {
+.header {
     height: 60px;
     width : 100%;
     position: fixed;
     top: 0;
+    z-index: 10;
     padding: 10px;
     border-bottom: 1px solid #d4c7c7;
     box-shadow: 2px 0.5px #ccc;
+    background: #ffffff;
 }
 
 .container{
     margin-top: 80px;
+    position relative;
 }
 .name{
     margin-left: 20px;
 }
-nav li{
+.header li{
     list-style-type: none;
     display: inline;
     font-size: 24px;
@@ -131,14 +134,15 @@ a:hover{
 
 </style>
 <body>
-<nav>
-
-<li class="name">CAMs</li>
-<div class="right">
-<li><a href="{{url_for('login')}}"><i class="fa  fa-support"></i>Support</a></li>
-<li><a href="{{url_for('login')}}"><i class="fa  fa-sign-in"></i>Login</a></li>
+<div class="header">
+    <div class="header-cont">
+        <li class="name">CAMs</li>
+        <div class="right">
+            <li><a href="{{url_for('login')}}"><i class="fa  fa-support"></i>Support</a></li>
+            <li><a href="{{url_for('login')}}"><i class="fa  fa-sign-in"></i>Login</a></li>
+        </div>
+    </div>
 </div>
-</nav>
 
 <div class="container">
   <h2>Admissions Open for 2020!</h2>
@@ -176,12 +180,18 @@ a:hover{
     <ul>
       <li><a href="#section1">About Entrance Exam</a></li>
       <li><a href="#section2">Cut Off</a></li>
-      <li><a href="#section3">Section 3</a></li>
+      <li><a href="#section3">Eligibility</a></li>
       <li><a href="#section4">Section 4</a></li>
       <li><a href="#section5">Section 5</a></li>
     </ul>
     <section id="section1">
-      <h2>CAMs Exam</h2>
+      <h2>CAMS Entrance Exam</h2>
+        <p>CAMS Entrance Exam (CAMSEEE) is a national level entrance exam organized by CAMS every year for admitting aspirants into various undergraduate engineering programs offered by the university.</p>
+        <p><b>Mode of Application</b> : Online and Offline</p>
+        <h3>Important dates:</h3><br />
+        <p><b>Registeration opens</b> : 15<sup>th</sup> April, 2020</p>
+        <p><b>Registeration closes</b> : 30<sup>th</sup> May, 2020</p>
+        <p><b>Date of examination</b> : 1<sup>st</sup> June, 2020 - 15<sup>th</sup> June, 2020</p>
     </section>
 
     <section id="section2">
@@ -207,7 +217,10 @@ a:hover{
     </section>
 
     <section id="section3">
-      <h2>Section 3</h2>
+      <h2>Eligibility</h2>
+        <p><b>Age</b> : Candidates, whose date of birth falls on or after July 1, 1999.</p>
+        <br />
+        <p><b>Educational Qualification</b> : A pass in 10 + 2 (Class XII) or its equivalent examination with minimum 60% aggregate of marks in Mathematics, Physics and Chemistry and with not less than 55% individually in each of these three subjects.</p>
     </section>
     <section id="section4">
       <h2>Section 4</h2>
