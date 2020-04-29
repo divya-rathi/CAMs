@@ -131,7 +131,23 @@ a:hover{
 .right li a:hover{
     text-shadow: 0.5px 1.5px #ccc;
 }
+.applyNow{
+    background: #1e88e5;
+    margin-bottom: 60px;
+    margin-top: auto;
+    height: 70px;
+    font-size: 24px;
+    text-transform: capitalize;
+    border-radius: 8px;
 
+}
+.center{
+    float:center;
+    text-align: center;
+}
+.center a{
+    color: #ffffff;
+}
 </style>
 <body>
 <div class="header">
@@ -236,7 +252,9 @@ a:hover{
         <p>No, refund is not possible.</p>
     </section>
   </div>
-
+<div class="center">
+    <button class="applyNow"><a href="{{url_for('application')}}">Apply Now</a></button>
+</div>
 </body>
 </html>
 

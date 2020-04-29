@@ -91,6 +91,10 @@ def home_admin():
         if choose == 'Add Cut-Offs List':
             print('works')
 
+@app.route('/application',methods=['POST', 'GET'])
+def application():
+    return render_template('application.html')
+
 @app.route('/error')
 def err():
     flash("Wrong password entered")
