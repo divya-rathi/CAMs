@@ -9,62 +9,143 @@
 
     <title>CAMs--Home</title>
 </head>
+<style>
+    .container{
+    margin-top: 50px;
+    position: relative;
+}
+.center{
+    float:center;
+    text-align: center;
+    }
+</style>
 <body>
 <nav>
-    <p class="has-text-centered" >Navbar here</p>
+    <p class="has-text-centered" >CAMs</p>
 </nav>
 <div class="has-text-left "><h2 class="is-size-2" style="color:white;">Welcome {{u}} :)</h2>
 </div>
-<div class="tabs is-toggle is-fullwidth">
+<div class="container" class="tabs is-toggle is-fullwidth">
   <ul class="nav nav-tabs">
     <li class="is-active">
       <a data-toggle="tab" href="#Addcollege">
         <span class="icon is-small"><i class="fas fa-image" aria-hidden="true"></i></span>
-        <span>Add College</span>
+        <span name="tab">Add College Details</span>
       </a>
     </li>
     <li>
       <a data-toggle="tab" href="#RegStud">
         <span class="icon is-small"><i class="fas fa-music" aria-hidden="true"></i></span>
-        <span>Register Student</span>
+        <span name="tab">View & Register Students</span>
       </a>
     </li>
     <li>
       <a data-toggle="tab" href="#view">
         <span class="icon is-small"><i class="fas fa-film" aria-hidden="true"></i></span>
-        <span>View Final List</span>
+        <span name="tab">View Final Selected Students</span>
       </a>
     </li>
     <li>
         <a data-toggle="tab" href="#cutoff">
         <span class="icon is-small"><i class="far fa-file-alt" aria-hidden="true"></i></span>
-        <span>CutOff Details</span>
+        <span name="tab">Create CutOff List</span>
       </a>
     </li>
   </ul>
 <div class="tab-content">
   <div id="Addcollege" class="tab-pane fade in active">
-    <h3>Add College</h3>
-    <p>Some content.</p>
+    <h3>Please fill in this form to add details of the College.</h3>
+  <div class="container">
+
+    <p>Kindly, fill in the details</p>
+    <hr>
+    <b>Add Course</b>
+      <select id="course" name="course">
+      <option selected="selected">--Choose one from below--</option>
+      <option value="chem">Chemical Engineering</option>
+      <option value="civil">Civil Engineering</option>
+      <option value="cse">Computer Science and Engineering</option>
+      <option value="eee">Electrical and Electronic Engineering</option>
+      <option value="ece">Electronics and Communications Engineering</option>
+      </select>
+<br />
+    <b>Add Fee Structure for the Course</b>
+    <input type="text" placeholder="Enter the fee" name="fee" required>
+<br />
+    <b>Add Seats available</b>
+    <input type="text" placeholder="Enter the seats available" name="seats" required>
+    <hr>
+<br />
+    <p>By creating additions to the details, changes will be visible to the student's portal.</p>
+      <br />
+    <button type="submit">Add Details</button>
+  </div>
+
   </div>
   <div id="RegStud" class="tab-pane fade">
-    <h3>Register Student</h3>
-    <p>Some content reg</p>
+    <h2 class="tabsTitle">View Students who applied for admission</h2>
+      <table>
+          <tr>
+              <th>Name</th>
+
+              <th>Email</th>
+
+              <th>Stream</th>
+
+              <th>Marks scored</th>
+
+              <th>Cut-Off for the Stream</th>
+
+              <th>Applied for Admission</th>
+          </tr>
+          <tr>
+              <th>Accept/Remove</th>
+          </tr>
+      </table>
   </div>
+
   <div id="view" class="tab-pane fade">
-    <h3>View Final List</h3>
-    <p>Some content in menu 2.</p>
+    <h2 class="tabsTitle">View Students Final List</h2>
   </div>
-     <div class="tab-pane fade" id="cutoff">
-    <h3>CutOff Details</h3>
-    <p>Some content in menu 3.</p>
-  </div>
+     <div id="cutoff" class="tab-pane fade">
+    <div class="center">
+            <h2>CutOff Details</h2>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<label>
+  <input type="radio" name="type" value="1">Add New Branch</label>
+<label>
+  <input type="radio" name="type" value="2">Choose existing Branch</label>
+<div class="new">
+    <p><lable><b>Add Branch </b><input type="text" name="name"></lable></p>
+    <p><lable><b>Current cut-off </b><input type="text" name="name"></lable></p>
+    <p><lable><b>Previous Year </b><input type="text" name="name"></lable></p>
+    <p><lable><b>2 years back </b><input type="text" name="name"></lable></p>
+</div>
+<div class="exist">
+    <p><lable><b>Choose Branch </b>
+    <select id="SelectedCourse" name="course">
+      <option selected="selected">--Choose Branch from below--</option>
+      <option value="chem">Chemical Engineering</option>
+      <option value="civil">Civil Engineering</option>
+      <option value="cse">Computer Science and Engineering</option>
+      <option value="eee">Electrical and Electronic Engineering</option>
+      <option value="ece">Electronics and Communications Engineering</option>
+      </select></lable></p>
+    <p><lable><b>Current cut-off </b><input type="text" name="name"></lable></p>
+    <p><lable><b>Previous Year </b><input type="text" name="name"></lable></p>
+    <p><lable><b>2 years back </b><input type="text" name="name"></lable></p>
 </div>
 
 </div>
+<div class="center">
+<button class="button">Apply Changes</button>
+</div>
+  </div>
+</div>
 </div>
 
-</div>
+
 </body>
 </html>
 <script>
@@ -74,4 +155,12 @@ $(function() {
             $( this ).addClass( 'is-active' );
       });
 });
+
+  $('input[name="type"]').on('change', function() {
+    $('.exist')
+      .toggle(+this.value === 2 && this.checked);
+    $('.new')
+      .toggle(+this.value==1 && this.checked);
+}).change();
+
 </script>

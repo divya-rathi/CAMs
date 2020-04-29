@@ -31,10 +31,6 @@ button:hover{
     color: #fff;
 }
 
-nav{
-    height: 40px;
-    background: #ffffff;
-}
 .block{
     padding-top: 16px;
     margin-top: 80px;
@@ -46,6 +42,4 @@ nav{
 .register .login{
     margin-top: 7px;
 }
-.carousel-indicators li{
-    background-color: #325236;
-}
+

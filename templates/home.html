@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
@@ -16,9 +17,11 @@
 .carousel-indicators li{
     background-color: #325236;
 }
-
+.carousel-indicators{
+    z-index: 5;
+}
 .tabs{
-    margin: 80px;
+    margin:80px;
 }
 .tabs > ul {
   position: relative;
@@ -82,12 +85,84 @@
 .tabs > section[aria-hidden="true"] {
   display: none;
 }
+table, th, td {
+  border: 1px solid black;
+  padding: 20px;
+  text-align: center;
+  margin: 0 auto;
+}
+.tabsTitle{
+  text-align: center;
+  font-size: 50px;
+  font-family: "verdana";
+}
+.applyNow{
+    background: #1e88e5;
+    margin-bottom: 60px;
+    margin-top: auto;
+    height: 70px;
+    font-size: 24px;
+    text-transform: capitalize;
+    border-radius: 8px;
+
+}
+.center{
+    float:center;
+    text-align: center;
+}
+.header {
+    height: 60px;
+    width : 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    padding: 10px;
+    border-bottom: 1px solid #d4c7c7;
+    box-shadow: 2px 0.5px #ccc;
+    background: #ffffff;
+}
+
+.container{
+    margin-top: 80px;
+    position: relative;
+}
+.name{
+    margin-left: 20px;
+}
+.header li{
+    list-style-type: none;
+    display: inline;
+    font-size: 24px;
+}
+.right{
+    float: right;
+}
+a:hover{
+    text-decoration: none;
+}
+.center a{
+    color: #ffffff;
+}
+.right li a{
+    padding: 10px;
+    color: black;
+}
+.right li a:hover{
+    text-shadow: 0.5px 1.5px #ccc;
+}
 
 </style>
 <body>
-<nav>
-    <h2 style="text-align:right;"><a href="{{url_for('login')}}">Login</a></h2>
-</nav>
+<div class="header">
+    <div class="header-cont">
+        <li class="name">CAMs</li>
+        <div class="right">
+            <li><a href="{{url_for('login')}}"><i class="fa  fa-support"></i>Support</a></li>
+            <li><a href="{{url_for('login')}}"><i class="fa  fa-sign-in"></i>Login</a></li>
+        </div>
+    </div>
+</div>
+
 <div class="container">
   <h2>Admissions Open for 2020!</h2>
   <br />
@@ -122,29 +197,67 @@
 
 <div class="tabs">
     <ul>
-      <li><a href="#section1">Section 1</a></li>
-      <li><a href="#section2">Section 2</a></li>
-      <li><a href="#section3">Section 3</a></li>
-      <li><a href="#section4">Section 4</a></li>
-      <li><a href="#section5">Section 5</a></li>
+      <li><a href="#section1">About Entrance Exam</a></li>
+      <li><a href="#section2">Cut Off</a></li>
+      <li><a href="#section3">Eligibility</a></li>
+      <li><a href="#section4">About Us</a></li>
+      <li><a href="#section5">FAQs</a></li>
     </ul>
     <section id="section1">
-      <h2>Section 1</h2>
-    </section>s
-    <section id="section2">
-      <h2>Section 2</h2>
+      <h2>CAMS Entrance Exam</h2>
+        <p>CAMS Entrance Exam (CAMSEEE) is a national level entrance exam organized by CAMS every year for admitting aspirants into various undergraduate engineering programs offered by the university.</p>
+        <p><b>Mode of Application</b> : Online and Offline</p>
+        <h3>Important dates:</h3><br />
+        <p><b>Registeration opens</b> : 15<sup>th</sup> April, 2020</p>
+        <p><b>Registeration closes</b> : 30<sup>th</sup> May, 2020</p>
+        <p><b>Date of examination</b> : 1<sup>st</sup> June, 2020 - 15<sup>th</sup> June, 2020</p>
     </section>
+
+    <section id="section2">
+      <h2 class="tabsTitle">Cut Off</h2>
+      <table>
+          <tr>
+              <th>Stream</th>
+              <th>Current Year</th>
+              <th>Previous Year</th>
+              <th>2 Years back</th>
+          </tr>
+          {% for key, value in cf.items() %}
+
+          <tr>
+              <td>{{key}}</td>
+              {% for k, v in value.items() %}
+              <td>{{v}}</td>
+              {% endfor %}
+          </tr>
+          {% endfor %}
+      </table>
+
+    </section>
+
     <section id="section3">
-      <h2>Section 3</h2>
+      <h2>Eligibility</h2>
+        <p><b>Age</b> : Candidates, whose date of birth falls on or after July 1, 1999.</p>
+        <br />
+        <p><b>Educational Qualification</b> : A pass in 10 + 2 (Class XII) or its equivalent examination with minimum 60% aggregate of marks in Mathematics, Physics and Chemistry and with not less than 55% individually in each of these three subjects.</p>
     </section>
     <section id="section4">
-      <h2>Section 4</h2>
+        <h2>About us</h2>
+        <p><b>Contact us</b> : +91-987-556-2233, +91-678-887-1234 </p>
+        <p><b>Email Us at</b> : camsadmission@cams.edu</p>
     </section>
     <section id="section5">
-      <h2>Section 5</h2>
+        <h2>Frequently Asked Questions</h2>
+        <br />
+        <p><b>How to change my exam city?</b></p>
+        <p>Please send mail to camsadmission@cams.edu with your details.</p>
+        <p><b>After the completion process of Application and payment if I don’t want to proceed will I get my refund?</b></p>
+        <p>No, refund is not possible.</p>
     </section>
   </div>
-
+<div class="center">
+    <button class="applyNow"><a href="{{url_for('application')}}">Apply Now</a></button>
+</div>
 </body>
 </html>
 
