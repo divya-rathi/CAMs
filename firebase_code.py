@@ -10,6 +10,7 @@ config = {
 }
 firebase = pyrebase.initialize_app(config)
 db = firebase.database()
+db.child("credentials").child("CAMS0000").push({"EmailId":"admin@gmail.com" , "Password": "admin@123"})
 # userId = "CAMS"
 # for i in range(2,5):
 #     if i <= 9:
