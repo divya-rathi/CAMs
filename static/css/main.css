@@ -42,18 +42,36 @@ button:hover{
 .register .login{
     margin-top: 7px;
 }
-.carousel-indicators li{
-    background-color: #325236;
-}
-.tabContent {
-    display:none;
-}
 
-#g-btn{
-    height:20px;
-    width:100px;
-    margin: -20px -50px;
-    position:relative;
-    top:50%;
-    left:50%;
-}}
+.right .headerli a{
+    padding: 10px;
+    color: black;
+}
+.right .headerli a:hover{
+    text-shadow: 0.5px 1.5px #ccc;
+}
+a:hover{
+    text-decoration: none;
+}
+.name{
+    margin-left: 20px;
+}
+.right{
+    float: right;
+}
+.camsheader {
+    height: 60px;
+    width : 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    padding: 10px;
+    border-bottom: 1px solid #d4c7c7;
+    box-shadow: 2px 0.5px #ccc;
+    background: #ffffff;
+}
+.camsheader .name, .camsheader .headerli {
+    list-style-type: none;
+    display: inline;
+    font-size: 24px;
+}

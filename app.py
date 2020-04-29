@@ -29,14 +29,20 @@ def home():
 
 @app.route('/login', methods=['POST', 'GET'])
 def login():
-    if request.form == 'POST':
+    if request.method == 'POST':
         global active
         temp = -1
         username = request.form['uname']
+        print(username)
         password = request.form['pass']
+        print(password)
         for i in credentials:
+            print(i)
+            print(credentials[i]['EmailId'])
+            print(credentials[i]['Password'])
             if username in credentials[i]['EmailId'] and password in credentials[i]['Password']:
                 temp += 1
+                print("Yes")
                 session['logged_in'] = True
                 active = username
                 if active == 'admin@gmail.com':  ##admin
@@ -66,12 +72,12 @@ def register():
             lenOfCred = len(credentials)
             userId = "CAMS"
             if lenOfCred <= 9:
-                k = "000" +str(lenOfCred+1)
+                k = "000" +str(lenOfCred)
             elif lenOfCred >= 10 and lenOfCred <= 99:
-                k = "00" +str(lenOfCred+1)
+                k = "00" +str(lenOfCred)
             elif lenOfCred >=100 and  lenOfCred <= 999:
-                k = "0" + str(lenOfCred+1)
-            db.child("credentials").child(userId + k).push({"EmailId": username, "Password": password})
+                k = "0" + str(lenOfCred)
+            db.child("credentials").child(userId + k).set({"EmailId": username, "Password": password})
             global crendentials
             crendentials = firebase.get('/credentials', None)
             flash('Successfully Registered:) Go ahead and login')
