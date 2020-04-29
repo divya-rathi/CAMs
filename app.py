@@ -39,7 +39,7 @@ def login():
                 temp += 1
                 session['logged_in'] = True
                 active = username
-                if active == 'kaviya@gmail.com':  ##admin
+                if active == 'admin@gmail.com':  ##admin
                     return render_template('home_admin.html', u = active)
                 else:
                     return render_template('home_user.html', u = active)
