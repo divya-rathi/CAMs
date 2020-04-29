@@ -78,9 +78,7 @@ def register():
             return render_template('register.html')
     return render_template('register.html')
 
-@app.route('/application', methods=['POST', 'GET'])
-def application():
-    return render_template("application.html")
+
 @app.route('/error')
 def err():
     flash("Wrong password entered")
