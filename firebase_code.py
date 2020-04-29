@@ -10,7 +10,13 @@ config = {
 }
 firebase = pyrebase.initialize_app(config)
 db = firebase.database()
-db.child("credentials").child("CAMS0000").push({"EmailId":"admin@gmail.com" , "Password": "admin@123"})
+global active,credentials
+#Firebase
+from firebase import firebase
+firebase = firebase.FirebaseApplication('https://cams-da440.firebaseio.com/', None)
+credentials = firebase.get('/credentials', None)
+print(credentials)
+#db.child("credentials").child("CAMS0000").push({"EmailId":"admin@gmail.com" , "Password": "admin@123"})
 # userId = "CAMS"
 # for i in range(2,5):
 #     if i <= 9:
@@ -24,7 +30,7 @@ db.child("credentials").child("CAMS0000").push({"EmailId":"admin@gmail.com" , "P
 #     db.child("credentials").child(userId + k).set({"EmailId":uname , "Password": pwd})
 #db.child("seats").push(({"branch":"elec sci","no_of_seats":"45"}))
 
-ch = 'Y'
+ch = 'N'
 while ch == 'Y':
     branch = input()
     c1 = int(input())
