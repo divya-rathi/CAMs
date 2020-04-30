@@ -1,9 +1,9 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/main.css') }}">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+ <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" type= "text/css">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
@@ -14,7 +14,7 @@
 </nav>
 <div class="has-text-left "><h2 class="is-size-2" style="color:white;">Welcome {{u}} :)</h2>
 </div>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
+<script src="http://code.jquery.com/jquery-1.7.2.js" type="text/javascript"></script>
 <style>
 /*style nav bar*/
 .nav {
@@ -94,39 +94,41 @@ display: none;
     text-align: center;
     }
 
-td,th {
-    border: 1px solid rgb(190, 190, 190);
-    padding: 10px;
+  .container{
+    margin-top: 50px;
+    position: relative;
 }
-
-td {
+.center{
+    float:center;
     text-align: center;
-}
-
-tr:nth-child(even) {
-    background-color: #eee;
-}
-
-th[scope="col"] {
-    background-color: #696969;
-    color: #fff;
-}
-
-th[scope="row"] {
-    background-color: #d7d9f2;
-}
-
-caption {
+    }
+label {
+    font-weight: 300;
+    margin: 0 auto;
+    text-align: center;
     padding: 10px;
-    caption-side: bottom;
+    font-size: 20px;
+    display: inline-block;
+    }
+
+input[type=radio] {
+    width: 28px;
+    margin: auto;
+    height: auto;
+}
+input[type=text] {
+    height: 30px;
+    margin-left: 22px;
+    /* margin-right: 8px; */
+    float: right;
+    margin-inline-end: auto;
+    /* align-content: flex-end;
 }
 
-table {
-    border-collapse: collapse;
-    border: 2px solid rgb(200, 200, 200);
-    letter-spacing: 1px;
-    font-family: sans-serif;
-}
+<!--.new{-->
+<!--    display: grid;-->
+<!--}-->
+
 </style>
 </head>
 	<body>
@@ -146,51 +148,51 @@ table {
 				</li>
 			</ul>
 		</div>
-		<section id="tab-1" class="tab-content active">
-                <div>
-  <h3>Fill in the form to add details of the College to the database.</h3>
-<form>
-  <div>
-    <hr>
-      <table>
-     <tr>
-    <td align="right">Add Course    :   </td>
-         <td align="left">
-      <select id="course" name="course">
-      <option value="chem">Chemical Engineering</option>
-      <option value="civil">Civil Engineering</option>
-      <option value="cse">Computer Science and Engineering</option>
-      <option value="eee">Electrical and Electronic Engineering</option>
-      <option value="ece">Electronics and Communications Engineering</option>
-    </select>
-         </td>
-     </tr>
+		<section class="tab-content active" id="tab-1">
+        <div>
+            <h3>Fill in the form to add details of the College to the database.</h3>
+            <form>
+            <div class="container d-flex align-items-center justify-content-center">
+            <hr>
+              <table>
+             <tr>
+            <td align="right">Add Course    :   </td>
+                 <td align="left">
+              <select id="course" name="course">
+              <option value="chem">Chemical Engineering</option>
+              <option value="civil">Civil Engineering</option>
+              <option value="cse">Computer Science and Engineering</option>
+              <option value="eee">Electrical and Electronic Engineering</option>
+              <option value="ece">Electronics and Communications Engineering</option>
+            </select>
+                 </td>
+             </tr>
 
-     <tr>
-    <td align="right">Add Fee Structure     : </td>
-         <td align="left">
-    <input type="text" placeholder="Enter the fee" name="fee" required>
-         </td>
-     </tr>
-<br>
-     <tr>
-    <td align="right">Add Seats available   :  </td>
-         <td align="left">
-    <input type="text" placeholder="Enter the seats available" name="seats" required>
-         </td>
-     </tr>
+             <tr>
+            <td align="right">Add Fee Structure     : </td>
+                 <td align="left">
+            <input name="fee" placeholder="Enter the fee" required type="text">
+                 </td>
+             </tr>
+        <br>
+             <tr>
+            <td align="right">Add Seats available   :  </td>
+                 <td align="left">
+            <input name="seats" placeholder="Enter the seats available" required type="text">
+                 </td>
+             </tr>
 
-         </table>
-<br /><hr>
-    <p>By creating additions to the details, changes will be visible to the student's portal.</p>
-<br />
-    <button type="submit" id="g-btn" class=".text-center">Add Details</button>
-  </div>
-</form>
-			    </div>
+                 </table>
+        <br /><hr>
+            <p>By creating additions to the details, changes will be visible to the student's portal.</p>
+        <br />
+            <button class=".text-center" id="g-btn" type="submit">Add Details</button>
+          </div>
+        </form>
+        </div>
 		</section>
 
-		<section id="tab-2" class="tab-content hide">
+		<section class="tab-content hide" id="tab-2">
 			<div>
                 <h2 class="tabsTitle">View Students who applied for admission</h2>
       <table>
@@ -218,36 +220,51 @@ table {
 			</div>
 		</section>
 		<section class="tab-content hide" id="tab-4">
-			<div class="container d-flex align-items-center justify-content-center">
-				<table>
-                    <tr>
-                        <th scope="col">IdNo.</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Email</th>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </table>
+			<div>
+				Content in tab 3
 			</div>
 		</section>
- <section class="tab-content hide" id="tab-3">
+        <section class="tab-content hide" id="tab-3">
         <div class="center">
             <h2>CutOff Details</h2>
             <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+            <div class="row">
             <label><input name="type" type="radio" value="1">Add New Branch</label>
             <label><input name="type" type="radio" value="2">Choose existing Branch</label>
-           <div class="new">
-              <p><lable><b>Add Branch   </b><input name="name" type="text"></lable></p>
-              <p><lable><b>Current cut-off </b><input name="name" type="text"></lable></p>
-              <p><lable><b>Previous Year </b><input name="name" type="text"></lable></p>
-              <p><lable><b>2 years back </b><input name="name" type="text"></lable></p>
+            </div>
+
+           <div class="new" style="display: grid;">
+              <div style="height: auto;width: 500px;margin: 0 auto">
+              <div class="row" style="display:flex;align-items: baseline; margin-left: 8px;">
+                    <h4>Add branch</h4>
+                    <input name="name" type="text">
+              </div>
+              <div class="row" style="display:flex;align-items: baseline;">
+                    <h4>Current cut-off</h4>
+                    <input name="name" type="text">
+              </div>
+              <div class="row" style="display:flex;align-items: baseline;">
+                    <h4>Previous Year</h4>
+                    <input name="name" type="text">
+              </div>
+              <div class="row" style="display:flex;align-items: baseline;">
+                    <h4>2 years back</h4>
+                    <input name="name" type="text">
+              </div>
+
+
+              </div>
+<!--              <div class="col-xs-6 .col-sm-4" style="margin-top: 5px;">-->
+<!--                    <input type="text" name="name">-->
+<!--                    <input type="text" name="name">-->
+<!--                    <input type="text" name="name">-->
+<!--                    <input type="text" name="name">-->
+<!--              </div>-->
+              </div>
            </div>
             <div class="exist">
-                <p><lable><b>Choose Branch </b>
+                <p><label><b>Choose Branch </b>
                 <select id="SelectedCourse" name="course">
                     <option selected="selected">--Choose Branch from below--</option>
                     <option value="chem">Chemical Engineering</option>
@@ -255,7 +272,7 @@ table {
                     <option value="cse">Computer Science and Engineering</option>
                     <option value="eee">Electrical and Electronic Engineering</option>
                     <option value="ece">Electronics and Communications Engineering</option>
-                </select></lable></p>
+                </select></label></p>
                 <p><lable><b>Current cut-off </b><input name="name" type="text"></lable></p>
                 <p><lable><b>Previous Year </b><input name="name" type="text"></lable></p>
                 <p><lable><b>2 years back </b><input name="name" type="text"></lable></p>
