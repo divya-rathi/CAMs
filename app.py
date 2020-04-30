@@ -17,6 +17,7 @@ db = firebase.database()
 app = Flask(__name__)
 
 global active,credentials
+active = None
 #Firebase
 from firebase import firebase
 firebase = firebase.FirebaseApplication('https://cams-da440.firebaseio.com/', None)
@@ -25,25 +26,23 @@ cutoff = firebase.get('/Cutoff', None)
 
 @app.route('/', methods=['POST', 'GET'])
 def home():
-    return render_template('home.html', cf = cutoff)
+    global active
+    return render_template('home.html', u= active, cf = cutoff)
 
 @app.route('/login', methods=['POST', 'GET'])
 def login():
     if request.method == 'POST':
-        global active
         temp = -1
         username = request.form['uname']
         print(username)
         password = request.form['pass']
         print(password)
         for i in credentials:
-            print(i)
-            print(credentials[i]['EmailId'])
-            print(credentials[i]['Password'])
             if username in credentials[i]['EmailId'] and password in credentials[i]['Password']:
                 temp += 1
                 print("Yes")
                 session['logged_in'] = True
+                global active
                 active = username
                 if active == 'admin@gmail.com':  ##admin
                     return render_template('home_admin.html', u = active)
@@ -66,9 +65,6 @@ def register():
                 flash('User with this email already exits :/ ')
                 return render_template('register.html')
         else:
-            print("Registered user credentials")
-            print("Username: ",username)
-            print("Password: ",password)
             lenOfCred = len(credentials)
             userId = "CAMS"
             if lenOfCred <= 9:
@@ -100,6 +96,11 @@ def home_admin():
 @app.route('/application',methods=['POST', 'GET'])
 def application():
     return render_template('application.html')
+
+@app.route('/dashboard',methods=['POST', 'GET'])
+def dashboard():
+    global active
+    return render_template('student_dashboard.html', u= active)
 
 @app.route('/error')
 def err():
