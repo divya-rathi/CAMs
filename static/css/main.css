@@ -34,7 +34,6 @@ button:hover{
 .block{
     padding-top: 16px;
     margin-top: 80px;
-    height: 340px;
     width: 320px;
     background: #ffffff;
     margin-left: 40%;
@@ -74,4 +73,11 @@ a:hover{
     list-style-type: none;
     display: inline;
     font-size: 24px;
+}
+.loginform{
+    box-shadow: 0.5px 0.5px 2px 2px #ccc;
+    height: auto;
+    margin: 28px auto;
+    padding: 14px;
+    text-align: center;
 }
