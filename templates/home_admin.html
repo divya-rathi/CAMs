@@ -85,6 +85,23 @@ display: block;
 .tab-content.hide{
 display: none;
 }
+    .container{
+    margin-top: 50px;
+    position: relative;
+}
+.center{
+    float:center;
+    text-align: center;
+    }
+
+  .container{
+    margin-top: 50px;
+    position: relative;
+}
+.center{
+    float:center;
+    text-align: center;
+    }
 </style>
 </head>
 	<body>
@@ -175,11 +192,44 @@ display: none;
       </table>
 			</div>
 		</section>
-		<section id="tab-3" class="tab-content hide">
+		<section id="tab-4" class="tab-content hide">
 			<div>
 				Content in tab 3
 			</div>
 		</section>
+ <section class="tab-content hide" id="tab-3">
+        <div class="center">
+            <h2>CutOff Details</h2>
+            <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+            <label><input name="type" type="radio" value="1">Add New Branch</label>
+            <label><input name="type" type="radio" value="2">Choose existing Branch</label>
+           <div class="new">
+              <p><lable><b>Add Branch   </b><input name="name" type="text"></lable></p>
+              <p><lable><b>Current cut-off </b><input name="name" type="text"></lable></p>
+              <p><lable><b>Previous Year </b><input name="name" type="text"></lable></p>
+              <p><lable><b>2 years back </b><input name="name" type="text"></lable></p>
+           </div>
+            <div class="exist">
+                <p><lable><b>Choose Branch </b>
+                <select id="SelectedCourse" name="course">
+                    <option selected="selected">--Choose Branch from below--</option>
+                    <option value="chem">Chemical Engineering</option>
+                    <option value="civil">Civil Engineering</option>
+                    <option value="cse">Computer Science and Engineering</option>
+                    <option value="eee">Electrical and Electronic Engineering</option>
+                    <option value="ece">Electronics and Communications Engineering</option>
+                </select></lable></p>
+                <p><lable><b>Current cut-off </b><input name="name" type="text"></lable></p>
+                <p><lable><b>Previous Year </b><input name="name" type="text"></lable></p>
+                <p><lable><b>2 years back </b><input name="name" type="text"></lable></p>
+             </div>
+
+        </div>
+        <div class="center">
+            <button class="button">Apply Changes</button>
+        </div>
+    </section>
 	</body>
 </html>
 
@@ -208,4 +258,18 @@ display: none;
 		$(target_tab_selector).addClass('active');
 	     });
 	  });
+	  $('input[name="type"]').on('change', function() {
+    $('.exist')
+      .toggle(+this.value === 2 && this.checked);
+    $('.new')
+      .toggle(+this.value==1 && this.checked);
+}).change();
+
+ $('input[name="type"]').on('change', function() {
+    $('.exist')
+      .toggle(+this.value === 2 && this.checked);
+    $('.new')
+      .toggle(+this.value==1 && this.checked);
+}).change();
+
 </script>
