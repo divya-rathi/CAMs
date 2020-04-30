@@ -43,11 +43,11 @@ button:hover{
     margin-top: 7px;
 }
 
-.right .headerli a{
+.rightnav .headerli a{
     padding: 10px;
     color: black;
 }
-.right .headerli a:hover{
+.rightnav .headerli a:hover{
     text-shadow: 0.5px 1.5px #ccc;
 }
 a:hover{
@@ -55,8 +55,10 @@ a:hover{
 }
 .name{
     margin-left: 20px;
+    color: black;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
-.right{
+.rightnav{
     float: right;
 }
 .camsheader {
@@ -74,6 +76,12 @@ a:hover{
     list-style-type: none;
     display: inline;
     font-size: 24px;
+}
+.loginform{
+    box-shadow: 1px 0.5px 5px 3px #ccc;
+    padding: 14px;
+    text-align: center;
+    margin-top: 28px;
 }
  /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
     .row.content {height: 550px}

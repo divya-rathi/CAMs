@@ -127,8 +127,7 @@ table, th, td {
 <body>
 <div class="camsheader">
         <li class="name">CAMs</li>
-        <div class="right">
-<!--            <li class="headerli"><a href="#support"><i class="fa  fa-support"></i>Support</a></li>-->
+        <div class="rightnav">
             {%if u == None%}
             <li class="headerli"><a href="{{url_for('login')}}"><i class="fa  fa-sign-in"></i>Login</a></li>
             {% endif %}

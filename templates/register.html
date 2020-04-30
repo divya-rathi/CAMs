@@ -11,7 +11,7 @@
 
 <div class="camsheader">
         <li class="name">CAMs</li>
-        <div class="right">
+        <div class="rightnav">
             <li class="headerli"><a href="{{url_for('home')}}"><i class="fa fa-home"></i>Home</a></li>
 <!--            <li class="headerli"><a href="#support"><i class="fa fa-support"></i>Support</a></li>-->
             <li class="headerli"><a href="{{url_for('login')}}"><i class="fa fa-sign-in"></i>Login</a></li>
@@ -27,7 +27,7 @@
     <b>{% with messages = get_flashed_messages() %}
         {% if messages %}
             {% for message in messages %}
-                <h3 ;style="color:white">{{ message }}</h3>
+                <h3 style="color:white">{{ message }}</h3>
             {% endfor %}
         {% endif %}
     {% endwith %}</b>
