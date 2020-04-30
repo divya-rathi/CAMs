@@ -110,57 +110,34 @@ table, th, td {
     float:center;
     text-align: center;
 }
-.header {
-    height: 60px;
-    width : 100%;
-    position: fixed;
-    top: 0;
-    z-index: 10;
-    padding: 10px;
-    border-bottom: 1px solid #d4c7c7;
-    box-shadow: 2px 0.5px #ccc;
-    background: #ffffff;
-}
 
 .container{
     margin-top: 80px;
     position: relative;
 }
-.name{
-    margin-left: 20px;
-}
-.header li{
-    list-style-type: none;
-    display: inline;
-    font-size: 24px;
-}
 .right{
     float: right;
 }
-a:hover{
-    text-decoration: none;
-}
+
 .center a{
     color: #ffffff;
-}
-.right li a{
-    padding: 10px;
-    color: black;
-}
-.right li a:hover{
-    text-shadow: 0.5px 1.5px #ccc;
 }
 
 </style>
 <body>
-<div class="header">
-    <div class="header-cont">
+<div class="camsheader">
         <li class="name">CAMs</li>
         <div class="right">
-            <li><a href="{{url_for('login')}}"><i class="fa  fa-support"></i>Support</a></li>
-            <li><a href="{{url_for('login')}}"><i class="fa  fa-sign-in"></i>Login</a></li>
+            <li class="headerli"><a href="#support"><i class="fa  fa-support"></i>Support</a></li>
+            {%if u == null%}
+            <li class="headerli"><a href="{{url_for('login')}}"><i class="fa  fa-sign-in"></i>Login</a></li>
+            {% endif %}
+            {%if u != null%}
+            <li class="headerli"><a href="{{url_for('logout')}}"><i class="fa  fa-user"></i>Account</a></li>
+            <li class="headerli"><a href="{{url_for('logout')}}"><i class="fa  fa-sign-out"></i>Sign Out</a></li>
+            {% endif %}
+
         </div>
-    </div>
 </div>
 
 <div class="container">
