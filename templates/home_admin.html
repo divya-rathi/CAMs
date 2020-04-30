@@ -98,10 +98,14 @@ display: none;
     margin-top: 50px;
     position: relative;
 }
+
 .center{
     float:center;
     text-align: center;
     }
+    table, th, td {
+  border: 1px solid black;
+}
 </style>
 </head>
 	<body>
@@ -192,12 +196,20 @@ display: none;
       </table>
 			</div>
 		</section>
-		<section id="tab-3" class="tab-content hide">
-			<div>
-				Content in tab 3
+		<section class="tab-content hide" id="tab-4">
+			<div class="center">
+                <h2 class="tabsTitle">View Final student selected List</h2>
+				<table class="container">
+                    <tr>
+                       <th>IdNo</th>
+                       <th>Name</th>
+                       <th>Email</th>
+                    </tr>
+                </table>
+
 			</div>
 		</section>
- <section class="tab-content hide" id="tab-4">
+ <section class="tab-content hide" id="tab-3">
         <div class="center">
             <h2>CutOff Details</h2>
             <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
