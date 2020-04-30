@@ -34,9 +34,7 @@ def login():
     if request.method == 'POST':
         temp = -1
         username = request.form['uname']
-        print(username)
         password = request.form['pass']
-        print(password)
         for i in credentials:
             if username in credentials[i]['EmailId'] and password in credentials[i]['Password']:
                 temp += 1
