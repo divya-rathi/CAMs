@@ -85,6 +85,14 @@ display: block;
 .tab-content.hide{
 display: none;
 }
+    .container{
+    margin-top: 50px;
+    position: relative;
+}
+.center{
+    float:center;
+    text-align: center;
+    }
 </style>
 </head>
 	<body>
@@ -180,6 +188,7 @@ display: none;
 				Content in tab 3
 			</div>
 		</section>
+
 	</body>
 </html>
 
@@ -208,4 +217,11 @@ display: none;
 		$(target_tab_selector).addClass('active');
 	     });
 	  });
+	  $('input[name="type"]').on('change', function() {
+    $('.exist')
+      .toggle(+this.value === 2 && this.checked);
+    $('.new')
+      .toggle(+this.value==1 && this.checked);
+}).change();
+
 </script>
