@@ -12,7 +12,7 @@ config = {
     "messagingSenderId" : "592415369968"
 }
 firebase = pyrebase.initialize_app(config)
-db = firebase.database()
+db = firebase.database()Ṣ
 
 app = Flask(__name__)
 
