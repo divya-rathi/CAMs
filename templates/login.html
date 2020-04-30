@@ -7,24 +7,18 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <title>CAMs--Login</title>
 </head>
-<!--<body class="bg">-->
-<!--<nav>-->
-<!--    <head>-->
-<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
-<!--<style>-->
-
-<!--</style>-->
-<!--</head>-->
 <body>
 <div class="camsheader">
         <li class="name">CAMs</li>
         <div class="right">
-            <li class="headerli"><a href="#support"><i class="fa  fa-support"></i>Support</a></li>
-            <li class="headerli"><a href="{{url_for('login')}}"><i class="fa  fa-sign-in"></i>Login</a></li>
+            <li class="headerli"><a href="{{url_for('home')}}"><i class="fa fa-home"></i>Home</a></li>
+            <li class="headerli"><a href="#support"><i class="fa fa-support"></i>Support</a></li>
+            <li class="headerli"><a href="{{url_for('login')}}"><i class="fa fa-sign-in"></i>Login</a></li>
         </div>
 </div>
+<div>
 <div class="has-text-centered block">
-<form action="http://127.0.0.1:5000/login" method="POST">
+<form action="http://127.0.0.1:5000/login" class="loginform" method="POST">
     <h2 class="is-size-2">LOGIN</h2>
     <!--<label for="email"><b>Email</b></label>-->
     <input type="email" placeholder="Email Id" name="uname" required>
@@ -37,6 +31,7 @@
         <p>Need an account? <a href="{{url_for('register')}}">Sign up</a></p>
     </div>
 </form>
+</div>
 </div>
 </body>
 </html>

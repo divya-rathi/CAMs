@@ -73,7 +73,7 @@ def register():
             userId = "CAMS"
             if lenOfCred <= 9:
                 k = "000" +str(lenOfCred)
-            elif lenOfCred >= 10 and lenOfCred <= 99:
+            elif lenOfCreduccessfu >= 10 and lenOfCred <= 99:
                 k = "00" +str(lenOfCred)
             elif lenOfCred >=100 and  lenOfCred <= 999:
                 k = "0" + str(lenOfCred)
