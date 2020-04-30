@@ -34,6 +34,7 @@ button:hover{
 .block{
     padding-top: 16px;
     margin-top: 80px;
+    height: 340px;
     width: 320px;
     background: #ffffff;
     margin-left: 40%;
@@ -74,10 +75,20 @@ a:hover{
     display: inline;
     font-size: 24px;
 }
-.loginform{
-    box-shadow: 0.5px 0.5px 2px 2px #ccc;
-    height: auto;
-    margin: 28px auto;
-    padding: 14px;
-    text-align: center;
-}
+ /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 550px}
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;}
+    }
+    /*for non editable
+    .inputClass {
+            pointer-events: none;
+        }
