@@ -129,7 +129,14 @@ table, th, td {
         <li class="name">CAMs</li>
         <div class="right">
             <li class="headerli"><a href="#support"><i class="fa  fa-support"></i>Support</a></li>
+            {%if u == null%}
             <li class="headerli"><a href="{{url_for('login')}}"><i class="fa  fa-sign-in"></i>Login</a></li>
+            {% endif %}
+            {%if u != null%}
+            <li class="headerli"><a href="{{url_for('logout')}}"><i class="fa  fa-user"></i>Account</a></li>
+            <li class="headerli"><a href="{{url_for('logout')}}"><i class="fa  fa-sign-out"></i>Sign Out</a></li>
+            {% endif %}
+
         </div>
 </div>
 

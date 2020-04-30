@@ -48,7 +48,7 @@ def login():
                 if active == 'admin@gmail.com':  ##admin
                     return render_template('home_admin.html', u = active)
                 else:
-                    return render_template('home_user.html', u = active)
+                    return render_template('home.html', u = active, cf = cutoff)
 
         if temp == -1:
             return render_template('login.html', msg = "Invalid Credentials")
@@ -73,7 +73,7 @@ def register():
             userId = "CAMS"
             if lenOfCred <= 9:
                 k = "000" +str(lenOfCred)
-            elif lenOfCreduccessfu >= 10 and lenOfCred <= 99:
+            elif lenOfCred >= 10 and lenOfCred <= 99:
                 k = "00" +str(lenOfCred)
             elif lenOfCred >=100 and  lenOfCred <= 999:
                 k = "0" + str(lenOfCred)
