@@ -1,3 +1,5 @@
+import firebase as firebase
+from firebase import firebase
 from flask import Flask
 from flask import *     #Flask, flash, redirect, render_template, request, session, abort
 import os
@@ -12,7 +14,7 @@ config = {
     "messagingSenderId" : "592415369968"
 }
 firebase = pyrebase.initialize_app(config)
-db = firebase.database()Ṣ
+db = firebase.database()
 
 app = Flask(__name__)
 
@@ -93,7 +95,7 @@ def home_admin():
 
 @app.route('/application',methods=['POST', 'GET'])
 def application():
-    return render_template('application.html')
+    return render_template('application.html', stream = cutoff)
 
 @app.route('/dashboard',methods=['POST', 'GET'])
 def dashboard():

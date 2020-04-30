@@ -5,11 +5,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-<title>Bootstrap Sign up Form with Icons</title>
+<title>Application</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" type= "text/css">
 <style type="text/css">
 	body {
 		color: #fff;
@@ -28,6 +29,7 @@
 		padding: 30px 0;
 	}
     .signup-form form {
+        margin-top: 42px;
 		color: #999;
 		border-radius: 3px;
     	margin-bottom: 15px;
@@ -53,20 +55,28 @@
 	.signup-form .form-control {
 		min-height: 38px;
 		box-shadow: none !important;
+		margin-top: auto;
 	}
 	.signup-form .input-group-addon {
 		max-width: 42px;
 		text-align: center;
 	}
 	.signup-form input[type="checkbox"] {
-		margin-top: 2px;
-	}
-    .signup-form .btn{
+        margin-top: 2px;
+        float: left;
+        position: relative;
+        height: auto;
+        width: auto;
+    }
+    .signup-form .btn {
         font-size: 16px;
         font-weight: bold;
-		background: #19aa8d;
-		border: none;
-		min-width: 140px;
+        background: #19aa8d;
+        border: none;
+        min-width: 140px;
+        height: auto;
+        width: auto;
+        margin: auto;
     }
 	.signup-form .btn:hover, .signup-form .btn:focus {
 		background: #179b81;
@@ -99,19 +109,40 @@
 		font-size: 7px;
 		position: absolute;
 	}
+	.input-group {
+        position: relative;
+        display: table;
+        border-collapse: separate;
+        width: 100%;
+        text-align: center;
+    }
+    .input-group-addon {
+        padding: 6px 12px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1;
+        color: #555;
+        text-align: center;
+        background-color: #eee;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 48px;
+    }
 </style>
 </head>
-
-
-
-
-
-
 <body>
+<div class="camsheader">
+        <li class="name">CAMs</li>
+        <div class="rightnav">
+            <li class="headerli"><a href="{{url_for('home')}}"><i class="fa fa-home"></i>Home</a></li>
+            <li class="headerli"><a href="{{url_for('dashboard')}}"><i class="fa  fa-user"></i>Account</a></li>
+            <li class="headerli"><a href="{{url_for('logout')}}"><i class="fa  fa-sign-out"></i>Sign Out</a></li>
+        </div>
+</div>
     <div class="signup-form">
         <form action=" " method="post">
-            <h2>Sign Up</h2>
-            <p>Please fill in this form to create an account!</p>
+            <h2>Apply here</h2>
+            <p>Please fill in this form to register!</p>
             <hr>
             <div class="form-group">
                 <div class="input-group">
@@ -134,18 +165,16 @@
             <div class="form-group">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="fa fa-graduation-cap"></i></span>
-                    <input type="text" class="form-control" name="studPerc" placeholder=" % at class 12" required="required">
+                    <input class="form-control" name="studPerc" placeholder=" % in class 12" required="required" type="text">
                 </div>
             </div>
             <div class="form-group">
                 <div class="input-group">
-                    <select id="cars">
+                    <select id="branch">
                         <option value="">--Choose a Branch--</option>
-                        <option value="cse">Computer Science</option>
-                        <option value="eee">Electronics</option>
-                        <option value="mech">Mechanical</option>
-                        <option value="civil">Civil</option>
-                        <option value="ece">Chemical</option>
+                        {% for sub in stream %}
+                        <option value="{{sub}}">{{sub}}</option>
+                        {% endfor %}
                     </select>
                 </div>
             </div>
@@ -153,10 +182,9 @@
                 <label class="checkbox-inline"><input type="checkbox" required="required"><a>I accept the to receive information regarding my submitted enquiry</a> &amp; <a href="#">Privacy Policy</a></label>
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
+                <button class="btn btn-primary btn-lg" type="submit">Register</button>
             </div>
         </form>
-        <div class="text-center">Already have an account? <a href="#">Login here</a></div>
     </div>
     </body>
     </html>
