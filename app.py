@@ -107,6 +107,13 @@ def removeStud(d_id):
     applications = firebase.get('/application', None)
     return render_template('home_admin.html', u = active, cutoff = cutoff, form = applications)
 
+@app.route('/addStud/<string:d_id>',methods=['POST','GET'])
+def addStud(d_id):
+    #print(d_id)
+    db.child("application").child(d_id).update({'Status': 'Accepted'})
+    applications = firebase.get('/application', None)
+    return render_template('home_admin.html', u = active, cutoff = cutoff, form = applications)
+
 @app.route('/application',methods=['POST', 'GET'])
 def application():
     global active

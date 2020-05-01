@@ -296,6 +296,7 @@ input[type=submit] {
           {%if form != None %}
           {% for k,v in form.items() %}
           <tr>
+              {% if v['Status'] != 'Accepted' %}
               <td scope="row">{{k}}</td>
               <td scope="row">{{v['EmailId']}}</td>
               <td class="row">{{v['BranchChosen']}}</td>
@@ -305,7 +306,8 @@ input[type=submit] {
               <td class="row">{{v1['Current']}}</td>
               {% endif %}
               {% endfor %}
-              <td class="row"><a>Accept</a>    <a href="{{url_for('removeStud', d_id=k)}}">Remove</a></td>
+              <td class="row"><a href="{{url_for('addStud', d_id=k)}}">Accept</a>    <a href="{{url_for('removeStud', d_id=k)}}">Remove</a></td>
+              {% endif %}
           </tr>
           {% endfor %}
           {% endif %}
