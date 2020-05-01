@@ -124,18 +124,12 @@ caption {
     caption-side: bottom;
 }
 
-table {
-    border-collapse: collapse;
-    border: 2px solid rgb(200, 200, 200);
-    letter-spacing: 1px;
-    font-family: sans-serif;
-}
 .cutcontainer {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
 }
-.registerbtn {
+.applybtn {
   background-color: #4CAF50;
   color: white;
   padding: 16px 20px;
@@ -193,6 +187,12 @@ input[type=submit] {
     width: 100%;
     margin-top: 0;
   }
+}
+
+.greenh2 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #4CAF50;
 }
 </style>
 </head>
@@ -287,7 +287,7 @@ input[type=submit] {
 		</section>
 		<section class="tab-content hide" id="tab-4">
 			<div>
-                <h2 class="tabsTitle">View Students who applied for admission</h2>
+                <h2 class="greenh2">View Students who applied for admission</h2>
 				<table class="container d-flex align-items-center justify-content-center">
                     <tr>
                         <th scope="col">IdNo.</th>
@@ -309,12 +309,12 @@ input[type=submit] {
 		</section>
  <section class="tab-content hide" id="tab-3">
         <div>
-            <h2>CutOff Details</h2>
+            <h2 class="greenh2">Cut-Off Details</h2>
             <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
             <div class="center">
-            <label><input name="type" type="radio" value="1">Add New Branch </label>
-            <label><input name="type" type="radio" value="2">Choose existing Branch </label></div>
+                <label><input name="type" type="radio" value="1"><p>Add New Branch </p></label>
+                <label><input name="type" type="radio" value="2"><p>Choose existing Branch </p></label></div>
            <div class="new center">
 <div class="cutcontainer">
     <div class="cutrow">
@@ -328,33 +328,33 @@ input[type=submit] {
 
     <div class="cutrow">
       <div class="col-25">
-        <label for="curcut">Current CutOff</label>
+        <label for="curcutoff">Current CutOff</label>
       </div>
       <div class="col-75">
-        <input id="curcut" name="Current CutOff" placeholder="Current year CutOff" type="text">
+        <input id="curcutoff" name="Current CutOff" placeholder="Current year CutOff" type="text">
       </div>
     </div>
 
     <div class="cutrow">
       <div class="col-25">
-        <label for="PreCut">Previous Year</label>
+        <label for="PreCutoff">Previous Year</label>
       </div>
       <div class="col-75">
-        <input id="PreCut" name="PreCut" placeholder="Previous Year CutOff" type="text">
+        <input id="PreCutoff" name="PreCut" placeholder="Previous Year CutOff" type="text">
       </div>
     </div>
 
     <div class="cutrow">
       <div class="col-25">
-        <label for="2yrback">2 Years Back</label>
+        <label for="2yrbackcut">2 Years Back</label>
       </div>
       <div class="col-75">
-        <input id="2yrback" name="2yrcut" placeholder="2 Years CutOff" type="text">
+        <input id="2yrbackcut" name="2yrcut" placeholder="2 Years back CutOff" type="text">
       </div>
     </div>
 
     <div class="cutrow">
-     <button class="registerbtn" type="submit">apply changes</button>
+     <button class="applybtn" type="submit">apply changes</button>
     </div>
 </div>
            </div>
@@ -399,15 +399,16 @@ input[type=submit] {
         <label for="2yrback">2 Years Back</label>
       </div>
       <div class="col-75">
-        <input id="2yrback" name="2yrcut" placeholder="2 Years CutOff" type="text">
+        <input id="2yrback" name="2yrcut" placeholder="2 Years back CutOff" type="text">
       </div>
     </div>
 
     <div class="cutrow">
-     <button class="registerbtn" type="submit">apply changes</button>
+     <button class="applybtn" type="submit">apply changes</button>
     </div>
 </div>
 
+        </div>
         </div>
     </section>
 	</body>
