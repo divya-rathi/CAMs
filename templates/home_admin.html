@@ -292,19 +292,22 @@ input[type=submit] {
               <th scope="col">Stream</th>
               <th scope="col">Marks scored</th>
               <th scope="col">Cut-Off for the Stream</th>
-              <th scope="col">Applied for Admission</th>
               <th scope="col">Accept/Remove</th>
           </tr>
-
+          {% for k,v in form.items() %}
           <tr>
-              <td scope="row"></td>
-              <td scope="row"></td>
-              <td scope="row"></td>
-              <td scope="row"></td>
-              <td scope="row"></td>
-              <td scope="row"></td>
-              <td scope="row"></td>
+              <td scope="row">{{k}}</td>
+              <td scope="row">{{v['EmailId']}}</td>
+              <td class="row">{{v['BranchChosen']}}</td>
+              <td class="row">{{v['12thPercentage']}}</td>
+              {% for k1, v1 in stream.items() %}
+              {% if k1 == v['BranchChosen'] %}
+              <td class="row">{{v1['Current']}}</td>
+              {% endif %}
+              {% endfor %}
+              <td class="row"><a>Accept</a>    <a>Remove</a></td>
           </tr>
+          {% endfor %}
 
       </table>
 			</div>
