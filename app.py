@@ -145,6 +145,10 @@ def dashboard():
         return render_template('home_admin.html', u = active, cutoff = cutoff, form = applications)
     return render_template('student_dashboard.html', u= active, cid = credentials, form = applications)
 
+@app.route('/circulars',methods=['POST', 'GET'])
+def circulars():
+    return render_template("circulars.html")
+
 @app.route('/error')
 def err():
     flash("Wrong password entered")

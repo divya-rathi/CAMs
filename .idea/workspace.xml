@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1b9f53f-5f13-430e-a6fd-5b27a7d90a01" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/circulars.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/background_image_hogwarts3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/images.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/student_dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/student_dashboard.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,19 +35,19 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/amrita sem/sem 6/Open Lab/Lab/Online Turf Booking System_17416" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\rathi\Desktop\Python Flask Project\CAMs\templates" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\rathi\Desktop\Python Flask Project\CAMs\static\images" />
       <recent name="D:\Python Flask Project\CAMs\templates" />
       <recent name="D:\Python Flask Project\CAMs\static\css" />
       <recent name="C:\Users\rathi\Desktop\Python Flask Project\CAMs\static" />
       <recent name="C:\Users\rathi\Desktop\Python Flask Project\CAMs\static\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rathi\Desktop\Python Flask Project\CAMs\templates" />
     </key>
   </component>
   <component name="RunManager" selected="Python.app">
@@ -60,9 +58,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="D:\GitHub\Online-Sports-Turf-Playground-Booking-System\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
@@ -95,9 +93,36 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="mail" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CAMs" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mail.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.app" />
+      <item itemvalue="Python.firebase_code" />
+      <item itemvalue="Python.mail" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.app" />
+        <item itemvalue="Python.mail" />
         <item itemvalue="Python.firebase_code" />
       </list>
     </recent_temporary>
@@ -330,115 +355,57 @@
       <option name="project" value="LOCAL" />
       <updated>1588229526900</updated>
     </task>
-    <task id="LOCAL-00032" summary="Header edited">
-      <created>1588230407841</created>
+    <task id="LOCAL-00032" summary="Welcome user msg - home_admin page">
+      <created>1588308850685</created>
       <option name="number" value="00032" />
       <option name="presentableId" value="LOCAL-00032" />
       <option name="project" value="LOCAL" />
-      <updated>1588230407841</updated>
+      <updated>1588308850685</updated>
     </task>
-    <task id="LOCAL-00033" summary="Chnages in header and dashboard">
-      <created>1588234336206</created>
+    <task id="LOCAL-00033" summary="Update home_admin and back end for form">
+      <created>1588316135343</created>
       <option name="number" value="00033" />
       <option name="presentableId" value="LOCAL-00033" />
       <option name="project" value="LOCAL" />
-      <updated>1588234336206</updated>
+      <updated>1588316135343</updated>
     </task>
-    <task id="LOCAL-00034" summary="Updated app.py">
-      <created>1588253832484</created>
+    <task id="LOCAL-00034" summary="Update home_admin">
+      <created>1588316592988</created>
       <option name="number" value="00034" />
       <option name="presentableId" value="LOCAL-00034" />
       <option name="project" value="LOCAL" />
-      <updated>1588253832484</updated>
+      <updated>1588316592988</updated>
     </task>
-    <task id="LOCAL-00035" summary="application page">
-      <created>1588258312612</created>
+    <task id="LOCAL-00035" summary="Update home_admin">
+      <created>1588326734409</created>
       <option name="number" value="00035" />
       <option name="presentableId" value="LOCAL-00035" />
       <option name="project" value="LOCAL" />
-      <updated>1588258312612</updated>
+      <updated>1588326734409</updated>
     </task>
-    <task id="LOCAL-00036" summary="admin page">
-      <created>1588275723117</created>
+    <task id="LOCAL-00036" summary="Update home_admin">
+      <created>1588328982787</created>
       <option name="number" value="00036" />
       <option name="presentableId" value="LOCAL-00036" />
       <option name="project" value="LOCAL" />
-      <updated>1588275723117</updated>
+      <updated>1588328982787</updated>
     </task>
-    <task id="LOCAL-00037" summary="application">
-      <created>1588323232595</created>
+    <task id="LOCAL-00037" summary="Add View final selected students">
+      <created>1588340738415</created>
       <option name="number" value="00037" />
       <option name="presentableId" value="LOCAL-00037" />
       <option name="project" value="LOCAL" />
-      <updated>1588323232596</updated>
+      <updated>1588340738416</updated>
     </task>
-    <task id="LOCAL-00038" summary="application">
-      <created>1588323333521</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1588323333521</updated>
-    </task>
-    <task id="LOCAL-00039" summary="redirection">
-      <created>1588326264017</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1588326264017</updated>
-    </task>
-    <task id="LOCAL-00040" summary="view registered students">
-      <created>1588328242942</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1588328242942</updated>
-    </task>
-    <task id="LOCAL-00041" summary="view registered students">
-      <created>1588328399630</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1588328399630</updated>
-    </task>
-    <task id="LOCAL-00042" summary="view registered students">
-      <created>1588328459617</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1588328459617</updated>
-    </task>
-    <task id="LOCAL-00043" summary="view registered students">
-      <created>1588328559738</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1588328559738</updated>
-    </task>
-    <task id="LOCAL-00044" summary="Add/remove functionality">
-      <created>1588330544225</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1588330544225</updated>
-    </task>
-    <task id="LOCAL-00045" summary="Add/remove functionality">
-      <created>1588330947614</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1588330947614</updated>
-    </task>
-    <task id="LOCAL-00046" summary="Add functionality">
-      <created>1588331495428</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1588331495428</updated>
-    </task>
-    <option name="localTasksCounter" value="47" />
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added login page" />
+    <MESSAGE value="css changed" />
+    <MESSAGE value="connected firebase" />
+    <MESSAGE value="fixed error with html page" />
+    <MESSAGE value="linked register and login pages" />
     <MESSAGE value="connected register to db" />
     <MESSAGE value="Tabs done" />
     <MESSAGE value="body changed" />
@@ -448,116 +415,122 @@
     <MESSAGE value="Home page tabs" />
     <MESSAGE value="Home page tabs and tab content for cut off" />
     <MESSAGE value="Header" />
+    <MESSAGE value="Updated app.py" />
     <MESSAGE value="Tab content" />
     <MESSAGE value="Tabs Done" />
     <MESSAGE value="Home page temporarily done" />
     <MESSAGE value="Indicators fixed" />
     <MESSAGE value="CSS compressed" />
     <MESSAGE value="Header attached" />
-    <MESSAGE value="Header edited" />
-    <MESSAGE value="Chnages in header and dashboard" />
-    <MESSAGE value="Updated app.py" />
-    <MESSAGE value="application page" />
-    <MESSAGE value="admin page" />
-    <MESSAGE value="application" />
-    <MESSAGE value="redirection" />
-    <MESSAGE value="view registered students" />
-    <MESSAGE value="Add/remove functionality" />
-    <MESSAGE value="Add functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add functionality" />
+    <MESSAGE value="Welcome user msg - home_admin page" />
+    <MESSAGE value="Update home_admin and back end for form" />
+    <MESSAGE value="Update home_admin" />
+    <MESSAGE value="Add View final selected students" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add View final selected students" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="381" y="0" key="#app" timestamp="1588342090897">
+    <state x="361" y="74" key="#Inspections" timestamp="1588309572068">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="74" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1588309572068" />
+    <state x="381" y="0" key="#app" timestamp="1588169567418">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="381" y="0" key="#app/0.0.1366.728@0.0.1366.728" timestamp="1588342090897" />
+    <state x="381" y="0" key="#app/0.0.1366.728@0.0.1366.728" timestamp="1588169567418" />
     <state x="428" y="0" key="#app/0.0.1536.824@0.0.1536.824" timestamp="1583583401575" />
-    <state x="498" y="0" key="CommitChangelistDialog2" timestamp="1588341974839">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588232837634">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="498" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1588341974839" />
+    <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1588232837634" />
+    <state x="503" y="54" key="#firebase_code" timestamp="1588309550542">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="503" y="54" key="#firebase_code/0.0.1536.824@0.0.1536.824" timestamp="1588309550542" />
+    <state x="394" y="0" key="CommitChangelistDialog2" timestamp="1588340737904">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="350" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1588229524630" />
     <state x="350" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1584540201242" />
-    <state x="394" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583587784046" />
-    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1588342106343">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="394" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588340737904" />
+    <state x="105" y="54" key="DiffContextDialog" timestamp="1588340748125">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1588342106343" />
-    <state x="785" y="100" key="FileChooserDialogImpl" timestamp="1588329109336">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="105" y="54" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1588340748125" />
+    <state x="883" y="113" key="FileChooserDialogImpl" timestamp="1588255558205">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="785" y="100" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1588329109336" />
-    <state x="883" y="113" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1583585719560" />
-    <state width="1345" height="188" key="GridCell.Tab.0.bottom" timestamp="1588342014383">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="785" y="100" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1588147669105" />
+    <state x="883" y="113" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588255558205" />
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1588348432480">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1345" height="188" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588342014383" />
+    <state width="1345" height="216" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588229939674" />
     <state width="1344" height="169" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1584540229959" />
-    <state width="1509" height="196" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583587090976" />
-    <state width="1345" height="188" key="GridCell.Tab.0.center" timestamp="1588342014382">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588348432480" />
+    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1588348432480">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1345" height="188" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1588342014382" />
+    <state width="1345" height="216" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1588229939672" />
     <state width="1344" height="169" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1584540229958" />
-    <state width="1509" height="196" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583587090976" />
-    <state width="1345" height="188" key="GridCell.Tab.0.left" timestamp="1588342014382">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588348432480" />
+    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1588348432480">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1345" height="188" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1588342014382" />
+    <state width="1345" height="216" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1588229939672" />
     <state width="1344" height="169" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1584540229958" />
-    <state width="1509" height="196" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583587090976" />
-    <state width="1345" height="188" key="GridCell.Tab.0.right" timestamp="1588342014382">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588348432480" />
+    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1588348432480">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1345" height="188" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1588342014382" />
+    <state width="1345" height="216" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1588229939673" />
     <state width="1344" height="169" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1584540229958" />
-    <state width="1509" height="196" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583587090976" />
-    <state width="1509" height="244" key="GridCell.Tab.1.bottom" timestamp="1583586380740">
+    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588348432480" />
+    <state width="1515" height="261" key="GridCell.Tab.1.bottom" timestamp="1588331387113">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1509" height="244" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583586380740" />
-    <state width="1509" height="244" key="GridCell.Tab.1.center" timestamp="1583586380739">
+    <state width="1515" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588331387113" />
+    <state width="1515" height="261" key="GridCell.Tab.1.center" timestamp="1588331387112">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1509" height="244" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1583586380739" />
-    <state width="1509" height="244" key="GridCell.Tab.1.left" timestamp="1583586380739">
+    <state width="1515" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1588331387112" />
+    <state width="1515" height="261" key="GridCell.Tab.1.left" timestamp="1588331387112">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1509" height="244" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1583586380739" />
-    <state width="1509" height="244" key="GridCell.Tab.1.right" timestamp="1583586380739">
+    <state width="1515" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1588331387112" />
+    <state width="1515" height="261" key="GridCell.Tab.1.right" timestamp="1588331387113">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1509" height="244" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1583586380739" />
-    <state x="129" y="55" key="MergeDialog" timestamp="1588328379227">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1515" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1588331387113" />
+    <state x="145" y="62" key="MergeDialog" timestamp="1588316347562">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="129" y="55" key="MergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1588328379227" />
-    <state x="395" y="81" key="MultipleFileMergeDialog" timestamp="1588342008302">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="129" y="55" key="MergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1588160176162" />
+    <state x="145" y="62" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1588316347562" />
+    <state x="444" y="92" key="MultipleFileMergeDialog" timestamp="1588342296444">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="395" y="81" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1588342008302" />
-    <state x="133" y="0" key="SettingsEditor" timestamp="1588328427374">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="395" y="81" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1588226625839" />
+    <state x="444" y="92" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1588342296444" />
+    <state x="149" y="0" key="SettingsEditor" timestamp="1588331361216">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="133" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1588328427374" />
-    <state x="149" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1583583601024" />
-    <state x="470" y="83" key="VCS.ChangeListViewerDialog" timestamp="1588253807572">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="133" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1588169604040" />
+    <state x="149" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1588331361216" />
+    <state x="392" y="195" key="Vcs.Push.Dialog.v2" timestamp="1588340831693">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="470" y="83" key="VCS.ChangeListViewerDialog/0.0.1366.728@0.0.1366.728" timestamp="1588253807572" />
-    <state x="232" y="73" key="Vcs.Push.Dialog.v2" timestamp="1588341982171">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="232" y="73" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1588341982171" />
+    <state x="232" y="73" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1588229543291" />
     <state x="232" y="77" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1584540210554" />
-    <state x="261" y="83" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1583587483322" />
-    <state x="494" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588342106332">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="392" y="195" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1588340831693" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1588255453892">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="494" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1588342106332" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1588320846828">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1588255453892" />
+    <state x="555" y="320" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588342286507">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1588320846828" />
+    <state x="494" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1588226493850" />
+    <state x="555" y="320" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1588342286507" />
   </component>
 </project>
