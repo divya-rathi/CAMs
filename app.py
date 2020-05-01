@@ -1,7 +1,5 @@
 import firebase as firebase
-from firebase import firebase
-from flask import Flask
-from flask import *     #Flask, flash, redirect, render_template, request, session, abort
+from flask import *
 import os
 import pyrebase
 
@@ -35,6 +33,7 @@ def home():
 
 @app.route('/login', methods=['POST', 'GET'])
 def login():
+    credentials = firebase.get('/credentials', None)
     if request.method == 'POST':
         temp = -1
         username = request.form['uname']

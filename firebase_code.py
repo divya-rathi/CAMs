@@ -14,8 +14,8 @@ global active,credentials
 #Firebase
 from firebase import firebase
 firebase = firebase.FirebaseApplication('https://cams-da440.firebaseio.com/', None)
-credentials = firebase.get('/application', None)
-print(credentials)
+db = firebase.get('/', None)
+print(db)
 #db.child("credentials").child("CAMS0000").push({"EmailId":"admin@gmail.com" , "Password": "admin@123"})
 # userId = "CAMS"
 # for i in range(2,5):
@@ -41,3 +41,4 @@ while ch == 'Y':
 
 # db.child("Cutoff").child("branch").remove()
 #db.child("Cutoff").child("branch").update({'b': 1})
+
