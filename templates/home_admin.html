@@ -157,11 +157,10 @@ table {
     <td align="right">Add Course    :   </td>
          <td align="left">
       <select id="course" name="course">
-      <option value="chem">Chemical Engineering</option>
-      <option value="civil">Civil Engineering</option>
-      <option value="cse">Computer Science and Engineering</option>
-      <option value="eee">Electrical and Electronic Engineering</option>
-      <option value="ece">Electronics and Communications Engineering</option>
+      <option value="">--Choose a Branch--</option>
+            {% for course in stream %}
+            <option value="{{sub}}">{{course}}</option>
+            {% endfor %}
     </select>
          </td>
      </tr>
@@ -205,7 +204,8 @@ table {
           </tr>
 
           <tr>
-              <td></td>
+              {%for id in credentials.keys()%}
+              <td>{{id}}</td>
               <td></td>
               <td></td>
               <td></td>
@@ -213,7 +213,7 @@ table {
               <td></td>
               <td></td>
           </tr>
-
+            {% endfor %}
       </table>
 			</div>
 		</section>

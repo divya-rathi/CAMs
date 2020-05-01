@@ -25,6 +25,7 @@ from firebase import firebase
 firebase = firebase.FirebaseApplication('https://cams-da440.firebaseio.com/', None)
 credentials = firebase.get('/credentials', None)
 cutoff = firebase.get('/Cutoff', None)
+form = firebase.get('/form',None)
 
 @app.route('/', methods=['POST', 'GET'])
 def home():
@@ -45,7 +46,7 @@ def login():
                 global active
                 active = username
                 if active == 'admin@gmail.com':  ##admin
-                    return render_template('home_admin.html', u = active)
+                    return render_template('home_admin.html', u = active, cred = credentials, cf = cutoff, form = form )
                 else:
                     return render_template('home.html', u = active, cf = cutoff)
 
@@ -82,6 +83,7 @@ def register():
 
 @app.route('/home_admin',methods=['POST','GET '])
 def home_admin():
+    global active
     if request.method == 'POST':
         choose = request.form['tab']
         if choose == 'Add College Details':
@@ -95,6 +97,36 @@ def home_admin():
 
 @app.route('/application',methods=['POST', 'GET'])
 def application():
+    if request.method == 'POST':
+        global active
+        global form
+        name = request.form['studname']
+        mail = request.form['studemail']
+        pwd = request.form['studpassword']
+        class12 = request.form['studPerc']
+        branch = request.form['branch']
+        temp = -1
+        active = mail
+        for i in credentials:
+            if mail in credentials[i]['EmailId'] and pwd in credentials[i]['Password']:
+                temp += 1
+                ##Push into DB form {}
+                lenOfform = len(form)
+                userId = "ADM"
+                if lenOfform <= 9:
+                    k = "000" + str(lenOfform)
+                elif lenOfform >= 10 and lenOfform <= 99:
+                    k = "00" + str(lenOfform)
+                elif lenOfform >= 100 and lenOfform <= 999:
+                    k = "0" + str(lenOfform)
+                db.child("form").child(userId + k).set({"EmailId": mail, "Name": name, "Password": pwd, "Score12": class12, "Stream": branch})
+                form = firebase.get('/form', None)
+
+                flash('Successfully Applied:) Patiently wait for response from Admin')
+                return render_template('home.html', u = active, cf = cutoff)
+        if temp == -1:
+            flash('Invalid Credentials! Apply again with valid credentials')
+            return render_template('login.html', msg="Invalid Credentials")
     return render_template('application.html', stream = cutoff)
 
 @app.route('/dashboard',methods=['POST', 'GET'])
