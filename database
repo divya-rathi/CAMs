@@ -1,0 +1,64 @@
+{'Cutoff': 
+      {'Chemical Engineering': 
+            {'Current': 680, 
+             'Previous': 680, 
+             'TwoYearsPrev': 615}, 
+       'Civil Engineering': 
+             {'Current': 728, 
+              'Previous': 700,
+              'TwoYearsPrev': 750},
+       'Computer Science and Engineering': 
+             {'Current': 940,
+              'Previous': 948,
+              'TwoYearsPrev': 924},
+       'Electrical and Electronic Engineering': 
+              {'Current': 860,
+               'Previous': 845, 
+               'TwoYearsPrev': 850},
+       'Electronics and Communications Engineering': 
+              {'Current': 910, 
+               'Previous': 890,
+               'TwoYearsPrev': 890}},
+'application': 
+      {'CAMS0001': 
+            {'12thPercentage': '98', 
+             'BranchChosen': 'Computer Science and Engineering',
+             'EmailId': 'divya@gmail.com',
+             'Name': 'Divya Rathi',
+             'Status': 'Accepted'}, 
+        'CAMS0003': 
+            {'12thPercentage': '97',
+             'BranchChosen': 'Civil Engineering', 
+             'EmailId': 'kaviya@gmail.com',
+             'Name': 'Kaviya S',
+             'Status': 'Rejected'}, 
+        'CAMS0007': 
+            {'12thPercentage': '88',
+             'BranchChosen': 'Electrical and Electronic Engineering',
+             'EmailId': 'camstud@gmail.com', 
+             'Name': 'Cams User'}}, 
+'credentials': 
+      {'CAMS0000': 
+            {'EmailId': 'admin@gmail.com',
+             'Password': 'admin@123'}, 
+        'CAMS0001': 
+            {'EmailId': 'divya@gmail.com',
+             'Password': 'thick'}, 
+        'CAMS0002': 
+            {'EmailId': 'akku@gmail.com',
+             'Password': 'akshaya'}, 
+        'CAMS0003': 
+            {'EmailId': 'kaviya@gmail.com', 
+             'Password': 'senthil'},
+        'CAMS0004': 
+            {'EmailId': 'egayu3@gmail.com',
+             'Password': 'gayu'}, 
+        'CAMS0005': 
+            {'EmailId': 'nive@gmail.com',
+             'Password': 'nivedha'}, 
+        'CAMS0006': 
+            {'EmailId': 'test@gmail.com', 
+             'Password': 'test'}, 
+        'CAMS0007': 
+            {'EmailId': 'camstud@gmail.com',
+             'Password': 'cams@123'}}}
