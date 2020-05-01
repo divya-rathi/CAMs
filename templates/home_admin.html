@@ -299,7 +299,7 @@ input[type=submit] {
               <td scope="row">{{v['EmailId']}}</td>
               <td class="row">{{v['BranchChosen']}}</td>
               <td class="row">{{v['12thPercentage']}}</td>
-              {% for k1, v1 in stream.items() %}
+              {% for k1, v1 in cutoff.items() %}
               {% if k1 == v['BranchChosen'] %}
               <td class="row">{{v1['Current']}}</td>
               {% endif %}
