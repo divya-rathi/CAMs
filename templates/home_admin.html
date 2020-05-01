@@ -366,11 +366,9 @@ input[type=submit] {
       <div class="col-75">
         <select id="SelecCourse" name="course">
                     <option selected="selected">--Choose Branch from below--</option>
-                    <option value="chem">Chemical Engineering</option>
-                    <option value="civil">Civil Engineering</option>
-                    <option value="cse">Computer Science and Engineering</option>
-                    <option value="eee">Electrical and Electronic Engineering</option>
-                    <option value="ece">Electronics and Communications Engineering</option>
+            {% for course in cf %}
+            <option value="{{sub}}">{{course}}</option>
+            {% endfor %}
         </select>
       </div>
     </div>
