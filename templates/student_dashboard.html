@@ -71,18 +71,6 @@
             <p></p>
 
             <p> <span class="glyphicon glyphicon-education"></span>Admission Status</p>
-<!--            {% for k,v in form.items() %}-->
-<!--              {% if v['EmailId'] == u %}-->
-<!--                {% if v['Status'] == 'Accepted' %}-->
-<!--                  <input type="text" value="Accepted">-->
-<!--                {% elif v['Status'] == 'Rejected' %}-->
-<!--                  <input type="text" value="Rejected">-->
-<!--                {% else %}-->
-<!--                  <input type="text" value="Pending">-->
-<!--                {% endif %}-->
-<!--            {% endif %}-->
-<!--            {% endfor %}-->
-
             {% for k,v in cid.items() %}
               {% if v['EmailId'] == u %}
                 {% if k not in form %}
