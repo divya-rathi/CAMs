@@ -39,3 +39,4 @@ while ch == 'Y':
     db.child("Cutoff").child(branch).set({"Current": c1, "Previous": c2, "TwoYearsPrev": c3})
     ch = input()
 
+# db.child("Cutoff").child("branch").remove()
