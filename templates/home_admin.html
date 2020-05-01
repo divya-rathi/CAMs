@@ -336,20 +336,27 @@ padding-right: 10px;
                 <h3 class="greenh2">View Selected Students List</h3>
 				<table class="container d-flex align-items-center justify-content-center">
                     <tr>
-                        <th scope="col">IdNo.</th>
-                        <th scope="col">Name</th>
+                        <th scope="col">CAMS ID</th>
                         <th scope="col">Email</th>
+                        <th scope="col">Stream</th>
+                         <th scope="col">Marks scored</th>
+                        <th scope="col">Cut-off for the Stream</th>
                     </tr>
-                    <tr>
-                        <td scope="row">CB.EN.U4CSE17416</td>
-                        <td scope="row">Divya</td>
-                        <td scope="row">divya@gmail.com</td>
+                    {%if form != None %}
+          {% for k,v in form.items() %}
+          <tr>
+              <td scope="row">{{k}}</td>
+              <td scope="row">{{v['EmailId']}}</td>
+              <td class="row">{{v['BranchChosen']}}</td>
+              <td class="row">{{v['12thPercentage']}}</td>
+              {% for k1, v1 in cutoff.items() %}
+              {% if k1 == v['BranchChosen'] %}
+              <td class="row">{{v1['Current']}}</td>
+              {% endif %}
+              {% endfor %}
                     </tr>
-                     <tr>
-                        <td scope="row">CB.EN.U4CSE17420</td>
-                        <td scope="row">Gayathri</td>
-                        <td scope="row">gayathri@gmail.com</td>
-                    </tr>
+          {% endfor %}
+          {% endif %}
                 </table>
 			</div>
 		</section>
