@@ -25,6 +25,7 @@ from firebase import firebase
 firebase = firebase.FirebaseApplication('https://cams-da440.firebaseio.com/', None)
 credentials = firebase.get('/credentials', None)
 cutoff = firebase.get('/Cutoff', None)
+applications = firebase.get('/application', None)
 
 @app.route('/', methods=['POST', 'GET'])
 def home():
@@ -45,8 +46,9 @@ def login():
                 global active
                 active = username
                 if active == 'admin@gmail.com':  ##admin
-                    return render_template('home_admin.html', u = active)
+                    return render_template('home_admin.html', u = active, stream = cutoff, form = applications)
                 else:
+                    print("logged")
                     return render_template('home.html', u = active, cf = cutoff)
 
         if temp == -1:
@@ -80,7 +82,7 @@ def register():
             return render_template('register.html')
     return render_template('register.html')
 
-@app.route('/home_admin',methods=['POST','GET '])
+@app.route('/home_admin',methods=['POST','GET'])
 def home_admin():
     if request.method == 'POST':
         choose = request.form['tab']
@@ -95,7 +97,25 @@ def home_admin():
 
 @app.route('/application',methods=['POST', 'GET'])
 def application():
-    return render_template('application.html', stream = cutoff)
+    global active
+    print(active)
+    if active != None:
+        for i in credentials:
+            if active in credentials[i]['EmailId']:
+                idno = i
+                break
+        applications = firebase.get('/application', None)
+        for i in applications:
+            if i == idno:
+                return render_template('congrats.html')
+        if request.method == 'POST':
+            username = request.form['studname']
+            perc12 = request.form['studPerc']
+            branch = request.form.get("branch", None)
+            db.child("application").child(idno).set({"EmailId":active , "Name":username, "12thPercentage": perc12, "BranchChosen": branch})
+            return render_template('congrats.html')
+        return render_template('application.html', emailId = active, stream = cutoff)
+    return render_template('login.html')
 
 @app.route('/dashboard',methods=['POST', 'GET'])
 def dashboard():

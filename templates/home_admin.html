@@ -224,11 +224,10 @@ input[type=submit] {
       <td align="right">Add Course    :   </td>
          <td align="left">
       <select id="course" name="course">
-      <option value="chem">Chemical Engineering</option>
-      <option value="civil">Civil Engineering</option>
-      <option value="cse">Computer Science and Engineering</option>
-      <option value="eee">Electrical and Electronic Engineering</option>
-      <option value="ece">Electronics and Communications Engineering</option>
+      <option value="">--Choose a Branch--</option>
+      {% for sub in stream %}
+          <option value="{{sub}}">{{sub}}</option>
+      {% endfor %}
        </select>
          </td>
      </tr>
@@ -366,12 +365,13 @@ input[type=submit] {
       </div>
       <div class="col-75">
         <select id="SelecCourse" name="course">
-                    <option selected="selected">--Choose Branch from below--</option>
-                    <option value="chem">Chemical Engineering</option>
-                    <option value="civil">Civil Engineering</option>
-                    <option value="cse">Computer Science and Engineering</option>
-                    <option value="eee">Electrical and Electronic Engineering</option>
-                    <option value="ece">Electronics and Communications Engineering</option>
+                    <option value="">--Choose a Branch--</option>
+                    {% for sub in stream %}
+                        <option value="{{sub}}">{{sub}}</option>
+                    {% endfor %}
+                    {% if value in stream%}
+                        <p>Yes</p>
+                    {% endif %}
         </select>
       </div>
     </div>
