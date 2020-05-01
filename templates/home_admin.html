@@ -6,11 +6,10 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <title>CAMs--admin</title>
+    <title>CAMs--Home</title>
 </head>
-<nav>
  <li class="name">CAMs</li>
-</nav>
+
 <div class="has-text-left "><h2 class="is-size-5">Welcome {{u}} :)</h2>
     <li class="signout"><a href="{{url_for('logout')}}"><i class="fa  fa-sign-out"></i>Sign Out</a></li>
 </div>
@@ -21,11 +20,6 @@
 margin-bottom: 18px;
 margin-left: 0;
 list-style: none;
-}
-.signout{
-margin: 0;
-float: right;
-padding-right: 10px;
 }
 .nav > li > a {
 display: block;
@@ -149,6 +143,7 @@ caption {
   cursor: pointer;
   opacity: 0.9;
 }
+
 .applybtn {
   background-color: #4CAF50;
   color: white;
@@ -226,7 +221,11 @@ input[type=submit] {
   text-align: center;
   color: #ff704d;
 }
-
+.signout{
+margin: 0;
+float: right;
+padding-right: 10px;
+}
 
 </style>
 </head>
@@ -309,20 +308,24 @@ input[type=submit] {
               <th scope="col">Stream</th>
               <th scope="col">Marks scored</th>
               <th scope="col">Cut-Off for the Stream</th>
-              <th scope="col">Applied for Admission</th>
               <th scope="col">Accept/Remove</th>
           </tr>
-
+    {%if form != None %}
+          {% for k,v in form.items() %}
           <tr>
-              <td scope="row"></td>
-              <td scope="row"></td>
-              <td scope="row"></td>
-              <td scope="row"></td>
-              <td scope="row"></td>
-              <td scope="row"></td>
-              <td scope="row"></td>
+              <td scope="row">{{k}}</td>
+              <td scope="row">{{v['EmailId']}}</td>
+              <td class="row">{{v['BranchChosen']}}</td>
+              <td class="row">{{v['12thPercentage']}}</td>
+              {% for k1, v1 in cutoff.items() %}
+              {% if k1 == v['BranchChosen'] %}
+              <td class="row">{{v1['Current']}}</td>
+              {% endif %}
+              {% endfor %}
+              <td class="row"><a>Accept</a>    <a href="{{url_for('removeStud', d_id=k)}}">Remove</a></td>
           </tr>
-
+          {% endfor %}
+          {% endif %}
       </table>
 			</div>
 
@@ -351,7 +354,7 @@ input[type=submit] {
 		</section>
  <section class="tab-content hide" id="tab-3">
         <div>
-            <h3 class="greenh2">Add Cut-Off new branch or change existing</h3>
+            <h3 class="greenh2">Add Cut-Off for new branch or change existing</h3>
             <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
             <div class="center">
