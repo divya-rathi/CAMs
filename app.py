@@ -32,6 +32,7 @@ def home():
     global active
     return render_template('home.html', u= active, cf = cutoff)
 
+
 @app.route('/login', methods=['POST', 'GET'])
 def login():
     if request.method == 'POST':
@@ -46,10 +47,11 @@ def login():
                 global active
                 active = username
                 if active == 'admin@gmail.com':  ##admin
-                    return render_template('home_admin.html', u = active, stream = cutoff, form = applications)
+                    applications = firebase.get('/application', None)
+                    return render_template('home_admin.html', u = active, cutoff = cutoff, form = applications)
                 else:
                     print("logged")
-                    return render_template('home.html', u = active, cf = cutoff)
+                    return redirect("/")
 
         if temp == -1:
             return render_template('login.html', msg = "Invalid Credentials")
@@ -84,16 +86,26 @@ def register():
 
 @app.route('/home_admin',methods=['POST','GET'])
 def home_admin():
+    global active
+
     if request.method == 'POST':
         choose = request.form['tab']
         if choose == 'Add College Details':
             print('works')
-        if choose == 'Register Students':
+        if choose == 'View & Register Students':
             print('works')
-        if choose == 'View Selected Students List':
+        if choose == 'Create CutOff List':
             print('works')
-        if choose == 'Add Cut-Offs List':
+        if choose == 'View Final Selected Students':
             print('works')
+    return render_template('home_admin.html')
+
+@app.route('/removeStud/<string:d_id>',methods=['POST','GET'])
+def removeStud(d_id):
+    #print(d_id)
+    db.child("application").child(d_id).remove()
+    applications = firebase.get('/application', None)
+    return render_template('home_admin.html', u = active, cutoff = cutoff, form = applications)
 
 @app.route('/application',methods=['POST', 'GET'])
 def application():
@@ -120,6 +132,8 @@ def application():
 @app.route('/dashboard',methods=['POST', 'GET'])
 def dashboard():
     global active
+    if active == 'admin@gmail.com':  ##admin
+        return render_template('home_admin.html', u = active, cutoff = cutoff, form = applications)
     return render_template('student_dashboard.html', u= active)
 
 @app.route('/error')
