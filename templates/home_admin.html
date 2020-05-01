@@ -293,6 +293,7 @@ input[type=submit] {
               <th scope="col">Cut-Off for the Stream</th>
               <th scope="col">Accept/Remove</th>
           </tr>
+          {%if form != None %}
           {% for k,v in form.items() %}
           <tr>
               <td scope="row">{{k}}</td>
@@ -307,7 +308,7 @@ input[type=submit] {
               <td class="row"><a>Accept</a>    <a href="{{url_for('removeStud', d_id=k)}}">Remove</a></td>
           </tr>
           {% endfor %}
-
+          {% endif %}
       </table>
 			</div>
 
