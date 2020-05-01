@@ -140,7 +140,7 @@
         </div>
 </div>
     <div class="signup-form">
-        <form action=" " method="post">
+        <form action="http://127.0.0.1:5000/application" method="POST">
             <h2>Apply here</h2>
             <p>Please fill in this form to register!</p>
             <hr>
@@ -170,7 +170,7 @@
             </div>
             <div class="form-group">
                 <div class="input-group">
-                    <select id="branch">
+                    <select id="branch" name="branch">
                         <option value="">--Choose a Branch--</option>
                         {% for sub in stream %}
                         <option value="{{sub}}">{{sub}}</option>

@@ -2,11 +2,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/main.css') }}">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" type= "text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>CAMs--Home</title>
 </head>
 <nav>
@@ -123,19 +122,18 @@ caption {
     padding: 10px;
     caption-side: bottom;
 }
-
-table {
-    border-collapse: collapse;
-    border: 2px solid rgb(200, 200, 200);
-    letter-spacing: 1px;
-    font-family: sans-serif;
+.addcontainer {
+  position: relative;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding-left: 450px;
 }
 .cutcontainer {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
 }
-.registerbtn {
+.applybtn {
   background-color: #4CAF50;
   color: white;
   padding: 16px 20px;
@@ -144,6 +142,14 @@ table {
   cursor: pointer;
   width: 100%;
   opacity: 0.9;
+}
+input[type=number]{
+    width: 100%;
+    padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
 }
 
     input[type=text], select, textarea{
@@ -194,6 +200,18 @@ input[type=submit] {
     margin-top: 0;
   }
 }
+
+.greenh2 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #4CAF50;
+}
+.pblue {
+  text-align: center;
+  color: #ff704d;
+}
+
+
 </style>
 </head>
 	<body>
@@ -215,69 +233,77 @@ input[type=submit] {
 		</div>
 		<section id="tab-1" class="tab-content active">
                 <div>
-  <h3>Fill in the form to add details of the College to the database.</h3>
+  <h3 class="greenh2">Fill in the form to add details of the College to the database.</h3>
 <form>
-  <div>
-    <hr>
-      <table>
-     <tr>
-      <td align="right">Add Course    :   </td>
-         <td align="left">
-      <select id="course" name="course">
-      <option value="">--Choose a Branch--</option>
-      {% for sub in stream %}
-          <option value="{{sub}}">{{sub}}</option>
-      {% endfor %}
+<div class="addcontainer">
+    <div class="cutrow">
+      <div class="col-25">
+        <label for="course">Add Course</label>
+      </div>
+      <div class="col-25">
+        <select id="course" name="course">
+            <option value="">--Choose a Branch--</option>
+            {% for course in cf %}
+            <option value="{{sub}}">{{course}}</option>
+            {% endfor %}
        </select>
-         </td>
-     </tr>
+      </div>
+    </div>
 
-     <tr>
-    <td align="right">Add Fee Structure     : </td>
-         <td align="left">
-    <input type="text" placeholder="Enter the fee" name="fee" required>
-         </td>
-     </tr>
-<br>
-     <tr>
-    <td align="right">Add Seats available   :  </td>
-         <td align="left">
-    <input type="text" placeholder="Enter the seats available" name="seats" required>
-         </td>
-     </tr>
+    <div class="cutrow">
+      <div class="col-25">
+        <label for="fee">Add Fee Structure</label>
+      </div>
+      <div class="col-25">
+        <input id="fee" name="fee" placeholder="Enter the fee" required type="number">
+      </div>
+    </div>
 
-         </table>
-<br /><hr>
-    <p>By creating additions to the details, changes will be visible to the student's portal.</p>
-<br />
-    <button type="submit" id="g-btn" class=".text-center">Add Details</button>
-  </div>
+    <div class="cutrow">
+      <div class="col-25">
+        <label for="seats">Add Seats available</label>
+      </div>
+      <div class="col-25">
+        <input id="seats" name="seats" placeholder="Enter the seats available" required type="number">
+      </div>
+    </div>
+</div>
+    <div>
+    <div class="center">
+        <p class="pblue">By creating additions to the details, changes will be visible to the student's portal.</p>
+        <label><input required type="checkbox">
+           <span class="checkmark"></span>Confirm
+        </label>
+        <div>
+        <button class=".text-center" id="g-btn" type="submit">Add Details</button></div>
+    </div>
+</div>
 </form>
 			    </div>
-		</section>
+        </section>
 
 		<section id="tab-2" class="tab-content hide">
 			<div>
-                <h2 class="tabsTitle">View Students who applied for admission</h2>
+                <h2 class="greenh2">View Students who applied for admission</h2>
       <table class="container d-flex align-items-center justify-content-center">
           <tr>
-              <th>CAMS ID</th>
-              <th>Email</th>
-              <th>Stream</th>
-              <th>Marks scored</th>
-              <th>Cut-Off for the Stream</th>
-              <th>Applied for Admission</th>
-              <th>Accept/Remove</th>
+              <th scope="col">CAMS ID</th>
+              <th scope="col">Email</th>
+              <th scope="col">Stream</th>
+              <th scope="col">Marks scored</th>
+              <th scope="col">Cut-Off for the Stream</th>
+              <th scope="col">Applied for Admission</th>
+              <th scope="col">Accept/Remove</th>
           </tr>
 
           <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td scope="row"></td>
+              <td scope="row"></td>
+              <td scope="row"></td>
+              <td scope="row"></td>
+              <td scope="row"></td>
+              <td scope="row"></td>
+              <td scope="row"></td>
           </tr>
 
       </table>
@@ -286,7 +312,7 @@ input[type=submit] {
 		</section>
 		<section class="tab-content hide" id="tab-4">
 			<div>
-                <h2 class="tabsTitle">View Students who applied for admission</h2>
+                <h2 class="greenh2">View Selected Students List</h2>
 				<table class="container d-flex align-items-center justify-content-center">
                     <tr>
                         <th scope="col">IdNo.</th>
@@ -308,70 +334,70 @@ input[type=submit] {
 		</section>
  <section class="tab-content hide" id="tab-3">
         <div>
-            <h2>CutOff Details</h2>
+            <h2 class="greenh2">Cut-Off Details</h2>
             <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
             <div class="center">
-            <label><input name="type" type="radio" value="1">Add New Branch </label>
-            <label><input name="type" type="radio" value="2">Choose existing Branch </label></div>
-           <div class="new center">
+                <label><input name="type" type="radio" value="1"><p>Add New Branch </p></label>
+                <label><input name="type" type="radio" value="2"><p>Choose existing Branch </p></label></div>
+            <div class="new center">
+                <form>
 <div class="cutcontainer">
     <div class="cutrow">
       <div class="col-25">
         <label for="SelecCourse">Choose Branch</label>
       </div>
       <div class="col-75">
-        <input id="SelectCourse" name="Selected Course" placeholder="Course Name" type="text">
+        <input id="SelectCourse" name="Selected Course" placeholder="Course Name" required type="text">
       </div>
     </div>
 
     <div class="cutrow">
       <div class="col-25">
-        <label for="curcut">Current CutOff</label>
+        <label for="curcutoff">Current CutOff</label>
       </div>
       <div class="col-75">
-        <input id="curcut" name="Current CutOff" placeholder="Current year CutOff" type="text">
+        <input id="curcutoff" name="Current CutOff" placeholder="Current year CutOff" required type="text">
       </div>
     </div>
 
     <div class="cutrow">
       <div class="col-25">
-        <label for="PreCut">Previous Year</label>
+        <label for="PreCutoff">Previous Year</label>
       </div>
       <div class="col-75">
-        <input id="PreCut" name="PreCut" placeholder="Previous Year CutOff" type="text">
+        <input id="PreCutoff" name="PreCut" placeholder="Previous Year CutOff" required type="text">
       </div>
     </div>
 
     <div class="cutrow">
       <div class="col-25">
-        <label for="2yrback">2 Years Back</label>
+        <label for="2yrbackcut">2 Years Back</label>
       </div>
       <div class="col-75">
-        <input id="2yrback" name="2yrcut" placeholder="2 Years CutOff" type="text">
+        <input id="2yrbackcut" name="2yrcut" placeholder="2 Years back CutOff" required type="text">
       </div>
     </div>
 
     <div class="cutrow">
-     <button class="registerbtn" type="submit">apply changes</button>
+     <button class="applybtn" type="submit">apply changes</button>
     </div>
 </div>
+                </form>
            </div>
             <div class="exist center">
+                <form>
 <div class="cutcontainer">
     <div class="cutrow">
       <div class="col-25">
         <label for="SelecCourse">Choose Branch</label>
       </div>
       <div class="col-75">
-        <select id="SelecCourse" name="course">
-                    <option value="">--Choose a Branch--</option>
-                    {% for sub in stream %}
-                        <option value="{{sub}}">{{sub}}</option>
-                    {% endfor %}
-                    {% if value in stream%}
-                        <p>Yes</p>
-                    {% endif %}
+        <select id="SelecCourse" name="course" required>
+                    <option selected="selected">--Choose Branch from below--</option>
+            {% for course in cf %}
+            <option value="{{sub}}">{{course}}</option>
+            {% endfor %}
         </select>
       </div>
     </div>
@@ -381,7 +407,7 @@ input[type=submit] {
         <label for="curcut">Current CutOff</label>
       </div>
       <div class="col-75">
-        <input id="curcut" name="Current CutOff" placeholder="Current year CutOff" type="text">
+        <input id="curcut" name="Current CutOff" placeholder="Current year CutOff" required type="text">
       </div>
     </div>
 
@@ -390,7 +416,7 @@ input[type=submit] {
         <label for="PreCut">Previous Year</label>
       </div>
       <div class="col-75">
-        <input id="PreCut" name="PreCut" placeholder="Previous Year CutOff" type="text">
+        <input id="PreCut" name="PreCut" placeholder="Previous Year CutOff" required type="text">
       </div>
     </div>
 
@@ -399,15 +425,18 @@ input[type=submit] {
         <label for="2yrback">2 Years Back</label>
       </div>
       <div class="col-75">
-        <input id="2yrback" name="2yrcut" placeholder="2 Years CutOff" type="text">
+        <input id="2yrback" name="2yrcut" placeholder="2 Years back CutOff" required type="text">
       </div>
     </div>
 
     <div class="cutrow">
-     <button class="registerbtn" type="submit">apply changes</button>
+     <button class="applybtn" type="submit">apply changes</button>
     </div>
-</div>
 
+</div>
+                </form>
+
+        </div>
         </div>
     </section>
 	</body>
