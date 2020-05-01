@@ -41,13 +41,12 @@
       <h2>CAM'S</h2>
       <ul class="nav nav-pills nav-stacked">
         <li class="active"><a href="#section1">Dashboard</a></li>
-        <li><a href="#section3">Circulars</a></li>
         <li><a href="{{url_for('home')}}">Back to HOME</a></li>
       </ul><br>
     </div>
     <br>
 
-    <div class="col-sm-9">
+    <div class="col-sm-9" >
       <div class="well">
         <p> <span class="glyphicon glyphicon-user"></span>Dashboard</p>
         <form>
@@ -71,17 +70,6 @@
             <p></p>
 
             <p> <span class="glyphicon glyphicon-education"></span>Admission Status</p>
-<!--            {% for k,v in form.items() %}-->
-<!--              {% if v['EmailId'] == u %}-->
-<!--                {% if v['Status'] == 'Accepted' %}-->
-<!--                  <input type="text" value="Accepted">-->
-<!--                {% elif v['Status'] == 'Rejected' %}-->
-<!--                  <input type="text" value="Rejected">-->
-<!--                {% else %}-->
-<!--                  <input type="text" value="Pending">-->
-<!--                {% endif %}-->
-<!--            {% endif %}-->
-<!--            {% endfor %}-->
 
             {% for k,v in cid.items() %}
               {% if v['EmailId'] == u %}
