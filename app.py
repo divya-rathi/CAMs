@@ -47,6 +47,7 @@ def login():
                 global active
                 active = username
                 if active == 'admin@gmail.com':  ##admin
+                    applications = firebase.get('/application', None)
                     return render_template('home_admin.html', u = active, cutoff = cutoff, form = applications)
                 else:
                     print("logged")

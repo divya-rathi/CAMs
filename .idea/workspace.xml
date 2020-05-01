@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f1b9f53f-5f13-430e-a6fd-5b27a7d90a01" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firebase_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/firebase_code.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home_admin.html" afterDir="false" />
-    </list>
+    <list default="true" id="f1b9f53f-5f13-430e-a6fd-5b27a7d90a01" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -384,11 +379,24 @@
       <option name="project" value="LOCAL" />
       <updated>1588326264017</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="view registered students">
+      <created>1588328242942</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1588328242942</updated>
+    </task>
+    <task id="LOCAL-00041" summary="view registered students">
+      <created>1588328399630</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1588328399630</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="connected firebase" />
     <MESSAGE value="fixed error with html page" />
     <MESSAGE value="linked register and login pages" />
     <MESSAGE value="connected register to db" />
@@ -413,7 +421,8 @@
     <MESSAGE value="admin page" />
     <MESSAGE value="application" />
     <MESSAGE value="redirection" />
-    <option name="LAST_COMMIT_MESSAGE" value="redirection" />
+    <MESSAGE value="view registered students" />
+    <option name="LAST_COMMIT_MESSAGE" value="view registered students" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -422,10 +431,10 @@
     </state>
     <state x="381" y="0" key="#app/0.0.1366.728@0.0.1366.728" timestamp="1588169567418" />
     <state x="428" y="0" key="#app/0.0.1536.824@0.0.1536.824" timestamp="1583583401575" />
-    <state x="498" y="0" key="CommitChangelistDialog2" timestamp="1588328342714">
+    <state x="498" y="0" key="CommitChangelistDialog2" timestamp="1588328398921">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="498" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1588328342714" />
+    <state x="498" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1588328398921" />
     <state x="350" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1584540201242" />
     <state x="394" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583587784046" />
     <state x="785" y="100" key="FileChooserDialogImpl" timestamp="1588324591026">
@@ -481,19 +490,19 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="395" y="81" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1588328382167" />
-    <state x="133" y="0" key="SettingsEditor" timestamp="1588323323860">
+    <state x="133" y="0" key="SettingsEditor" timestamp="1588328427374">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="133" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1588323323859" />
+    <state x="133" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1588328427374" />
     <state x="149" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1583583601024" />
     <state x="470" y="83" key="VCS.ChangeListViewerDialog" timestamp="1588253807572">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="470" y="83" key="VCS.ChangeListViewerDialog/0.0.1366.728@0.0.1366.728" timestamp="1588253807572" />
-    <state x="232" y="73" key="Vcs.Push.Dialog.v2" timestamp="1588328248266">
+    <state x="232" y="73" key="Vcs.Push.Dialog.v2" timestamp="1588328405876">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="232" y="73" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1588328248266" />
+    <state x="232" y="73" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1588328405876" />
     <state x="232" y="77" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1584540210554" />
     <state x="261" y="83" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1583587483322" />
     <state x="494" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588328349979">
