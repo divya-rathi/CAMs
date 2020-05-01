@@ -117,9 +117,10 @@ def application():
                 idno = i
                 break
         applications = firebase.get('/application', None)
-        for i in applications:
-            if i == idno:
-                return render_template('congrats.html')
+        if applications != None:
+            for i in applications:
+                if i == idno:
+                    return render_template('congrats.html')
         if request.method == 'POST':
             username = request.form['studname']
             perc12 = request.form['studPerc']
