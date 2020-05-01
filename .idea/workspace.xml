@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1b9f53f-5f13-430e-a6fd-5b27a7d90a01" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/CAMs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CAMs.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home_admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/student_dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/student_dashboard.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -448,11 +445,17 @@
       <option name="project" value="LOCAL" />
       <updated>1588342122581</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Dashboard and accept/remove in admin">
+      <created>1588343213228</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1588343213228</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Tabs done" />
     <MESSAGE value="body changed" />
     <MESSAGE value="changed field to email" />
     <MESSAGE value="home page" />
@@ -477,7 +480,8 @@
     <MESSAGE value="Add/remove functionality" />
     <MESSAGE value="Add functionality" />
     <MESSAGE value="Dashboard" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dashboard" />
+    <MESSAGE value="Dashboard and accept/remove in admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dashboard and accept/remove in admin" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -486,10 +490,10 @@
     </state>
     <state x="381" y="0" key="#app/0.0.1366.728@0.0.1366.728" timestamp="1588342090897" />
     <state x="428" y="0" key="#app/0.0.1536.824@0.0.1536.824" timestamp="1583583401575" />
-    <state x="498" y="0" key="CommitChangelistDialog2" timestamp="1588342121703">
+    <state x="498" y="0" key="CommitChangelistDialog2" timestamp="1588343212163">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="498" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1588342121703" />
+    <state x="498" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1588343212163" />
     <state x="350" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1584540201242" />
     <state x="394" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583587784046" />
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1588342106343">
@@ -558,10 +562,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="470" y="83" key="VCS.ChangeListViewerDialog/0.0.1366.728@0.0.1366.728" timestamp="1588253807572" />
-    <state x="232" y="73" key="Vcs.Push.Dialog.v2" timestamp="1588342133211">
+    <state x="232" y="73" key="Vcs.Push.Dialog.v2" timestamp="1588343220946">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="232" y="73" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1588342133211" />
+    <state x="232" y="73" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1588343220946" />
     <state x="232" y="77" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1584540210554" />
     <state x="261" y="83" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1583587483322" />
     <state x="494" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588342106332">

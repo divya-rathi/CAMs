@@ -349,6 +349,7 @@ font-size: 24px;
                     {%if form != None %}
           {% for k,v in form.items() %}
           <tr>
+              {% if v['Status'] == 'Accepted %}
               <td scope="row">{{k}}</td>
               <td scope="row">{{v['EmailId']}}</td>
               <td class="row">{{v['BranchChosen']}}</td>
@@ -358,7 +359,8 @@ font-size: 24px;
               <td class="row">{{v1['Current']}}</td>
               {% endif %}
               {% endfor %}
-                    </tr>
+              {% endif %}
+          </tr>
           {% endfor %}
           {% endif %}
                 </table>
