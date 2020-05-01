@@ -103,7 +103,7 @@ def home_admin():
 @app.route('/removeStud/<string:d_id>',methods=['POST','GET'])
 def removeStud(d_id):
     #print(d_id)
-    db.child("application").child(d_id).remove()
+    db.child("application").child(d_id).update({'Status': 'Rejected'})
     applications = firebase.get('/application', None)
     return render_template('home_admin.html', u = active, cutoff = cutoff, form = applications)
 
@@ -139,10 +139,11 @@ def application():
 
 @app.route('/dashboard',methods=['POST', 'GET'])
 def dashboard():
+    applications = firebase.get('/application', None)
     global active
     if active == 'admin@gmail.com':  ##admin
         return render_template('home_admin.html', u = active, cutoff = cutoff, form = applications)
-    return render_template('student_dashboard.html', u= active)
+    return render_template('student_dashboard.html', u= active, cid = credentials, form = applications)
 
 @app.route('/error')
 def err():

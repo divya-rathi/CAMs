@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1b9f53f-5f13-430e-a6fd-5b27a7d90a01" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home_admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/background_image_hogwarts3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/images.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/student_dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/student_dashboard.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +52,7 @@
       <recent name="C:\Users\rathi\Desktop\Python Flask Project\CAMs\static\css" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.firebase_code">
+  <component name="RunManager" selected="Python.app">
     <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CAMs" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -93,8 +97,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.firebase_code" />
         <item itemvalue="Python.app" />
+        <item itemvalue="Python.firebase_code" />
       </list>
     </recent_temporary>
   </component>
@@ -424,11 +428,17 @@
       <option name="project" value="LOCAL" />
       <updated>1588330947614</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Add functionality">
+      <created>1588331495428</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1588331495428</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="linked register and login pages" />
     <MESSAGE value="connected register to db" />
     <MESSAGE value="Tabs done" />
     <MESSAGE value="body changed" />
@@ -453,7 +463,8 @@
     <MESSAGE value="redirection" />
     <MESSAGE value="view registered students" />
     <MESSAGE value="Add/remove functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add/remove functionality" />
+    <MESSAGE value="Add functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add functionality" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -462,10 +473,10 @@
     </state>
     <state x="381" y="0" key="#app/0.0.1366.728@0.0.1366.728" timestamp="1588169567418" />
     <state x="428" y="0" key="#app/0.0.1536.824@0.0.1536.824" timestamp="1583583401575" />
-    <state x="498" y="0" key="CommitChangelistDialog2" timestamp="1588330946817">
+    <state x="498" y="0" key="CommitChangelistDialog2" timestamp="1588331494491">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="498" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1588330946817" />
+    <state x="498" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1588331494491" />
     <state x="350" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1584540201242" />
     <state x="394" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583587784046" />
     <state x="785" y="100" key="FileChooserDialogImpl" timestamp="1588329109336">
@@ -473,28 +484,28 @@
     </state>
     <state x="785" y="100" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1588329109336" />
     <state x="883" y="113" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1583585719560" />
-    <state width="1345" height="189" key="GridCell.Tab.0.bottom" timestamp="1588331450705">
+    <state width="1345" height="188" key="GridCell.Tab.0.bottom" timestamp="1588339867595">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="189" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588331450705" />
+    <state width="1345" height="188" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588339867595" />
     <state width="1344" height="169" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1584540229959" />
     <state width="1509" height="196" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583587090976" />
-    <state width="1345" height="189" key="GridCell.Tab.0.center" timestamp="1588331450705">
+    <state width="1345" height="188" key="GridCell.Tab.0.center" timestamp="1588339867594">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="189" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1588331450705" />
+    <state width="1345" height="188" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1588339867594" />
     <state width="1344" height="169" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1584540229958" />
     <state width="1509" height="196" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583587090976" />
-    <state width="1345" height="189" key="GridCell.Tab.0.left" timestamp="1588331450705">
+    <state width="1345" height="188" key="GridCell.Tab.0.left" timestamp="1588339867594">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="189" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1588331450705" />
+    <state width="1345" height="188" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1588339867594" />
     <state width="1344" height="169" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1584540229958" />
     <state width="1509" height="196" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583587090976" />
-    <state width="1345" height="189" key="GridCell.Tab.0.right" timestamp="1588331450705">
+    <state width="1345" height="188" key="GridCell.Tab.0.right" timestamp="1588339867594">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="189" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1588331450705" />
+    <state width="1345" height="188" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1588339867594" />
     <state width="1344" height="169" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1584540229958" />
     <state width="1509" height="196" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583587090976" />
     <state width="1509" height="244" key="GridCell.Tab.1.bottom" timestamp="1583586380740">

@@ -52,10 +52,15 @@
         <p> <span class="glyphicon glyphicon-user"></span>Dashboard</p>
         <form>
 
-            <label>Student Name</label><br>
-            <input type="text" id="Snaame" class="inputclass" name="fname"><br>
-            <label>Roll Number</label><br>
-            <input type="text" id="Sroll" class="inputclass" name="lname">
+            <label>Student Email-id</label><br>
+            <input class="inputclass" disabled id="Snaame" name="fname" type="text" value="{{u}}"><br>
+            <label>CAMS Id</label><br>
+            {% for k,v in cid.items() %}
+            {% if v['EmailId'] == u %}
+              <input class="inputclass" disabled id="Sroll" name="lname" type="text" value="{{k}}">
+            {% endif %}
+            {% endfor %}
+
 
           </form>
       </div>
@@ -65,9 +70,34 @@
           <div class="well">
             <p></p>
 
-              <p> <span class="glyphicon glyphicon-education"></span>Admission Status</p>
-              <input type="text" >
+            <p> <span class="glyphicon glyphicon-education"></span>Admission Status</p>
+<!--            {% for k,v in form.items() %}-->
+<!--              {% if v['EmailId'] == u %}-->
+<!--                {% if v['Status'] == 'Accepted' %}-->
+<!--                  <input type="text" value="Accepted">-->
+<!--                {% elif v['Status'] == 'Rejected' %}-->
+<!--                  <input type="text" value="Rejected">-->
+<!--                {% else %}-->
+<!--                  <input type="text" value="Pending">-->
+<!--                {% endif %}-->
+<!--            {% endif %}-->
+<!--            {% endfor %}-->
 
+            {% for k,v in cid.items() %}
+              {% if v['EmailId'] == u %}
+                {% if k not in form %}
+                  <input disabled type="text" value="Didn't Apply">
+                 {% else %}
+                    {% if form[k]['Status'] == 'Accepted' %}
+                      <input disabled type="text" value="Accepted">
+                    {% elif form[k]['Status'] == 'Rejected' %}
+                      <input disabled type="text" value="Rejected">
+                    {% else %}
+                      <input disabled type="text" value="Pending">
+                    {% endif %}
+                {% endif %}
+              {% endif %}
+            {% endfor %}
             <p></p>
           </div>
         </div>
