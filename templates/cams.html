@@ -1,0 +1,328 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+ <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" type= "text/css">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>CAMs--Home</title>
+</head>
+<nav>
+    <p class="has-text-centered" >Navbar here</p>
+</nav>
+<div class="has-text-left "><h2 class="is-size-2" style="color:white;">Welcome {{u}} :)</h2>
+</div>
+<script src="http://code.jquery.com/jquery-1.7.2.js" type="text/javascript"></script>
+<style>
+/*style nav bar*/
+.nav {
+margin-bottom: 18px;
+margin-left: 0;
+list-style: none;
+}
+.nav > li > a {
+display: block;
+}
+.nav-tabs{
+*zoom: 1;
+}
+.nav-tabs:before,
+.nav-tabs:after {
+display: table;
+content: "";
+}
+.nav-tabs:after {
+clear: both;
+}
+.nav-tabs > li {
+float: left;
+}
+.nav-tabs > li > a {
+padding-right: 12px;
+padding-left: 12px;
+margin-right: 2px;
+line-height: 14px;
+}
+.nav-tabs {
+border-bottom: 1px solid #ddd;
+}
+.nav-tabs > li {
+margin-bottom: -1px;
+}
+.nav-tabs > li > a {
+padding-top: 8px;
+padding-bottom: 8px;
+line-height: 18px;
+border: 1px solid transparent;
+-webkit-border-radius: 4px 4px 0 0;
+-moz-border-radius: 4px 4px 0 0;
+border-radius: 4px 4px 0 0;
+}
+
+.nav-tabs > li > a:hover {
+border-color: #eeeeee #eeeeee #dddddd;
+}
+
+.nav-tabs > .active > a,
+.nav-tabs > .active > a:hover {
+color: #555555;
+cursor: default;
+background-color: #ffffff;
+border: 1px solid #ddd;
+border-bottom-color: transparent;
+}
+
+li {
+line-height: 18px;
+}
+
+.tab-content.active{
+display: block;
+}
+
+.tab-content.hide{
+display: none;
+}
+    .container{
+    margin-top: 50px;
+    position: relative;
+}
+.center{
+    float:center;
+    text-align: center;
+    }
+
+  .container{
+    margin-top: 50px;
+    position: relative;
+}
+.center{
+    float:center;
+    text-align: center;
+    }
+label {
+    font-weight: 300;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    display: inline-block;
+    }
+
+input[type=radio] {
+    width: 28px;
+    margin: auto;
+    height: auto;
+}
+input[type=text] {
+    height: 30px;
+    margin-left: 22px;
+    /* margin-right: 8px; */
+    float: right;
+    margin-inline-end: auto;
+    /* align-content: flex-end;
+}
+
+<!--.new{-->
+<!--    display: grid;-->
+<!--}-->
+
+</style>
+</head>
+	<body>
+		<div>
+			<ul class="nav nav-tabs">
+				<li class="active">
+					<a href="#tab-1" name="tab">Add College Details</a>
+				</li>
+				<li>
+					<a href="#tab-2" name="tab">View & Register Students</a>
+				</li>
+				<li>
+					<a href="#tab-3" name="tab">Create CutOff List</a>
+				</li>
+                <li>
+					<a href="#tab-4" name="tab">View Final Selected Students</a>
+				</li>
+			</ul>
+		</div>
+		<section class="tab-content active" id="tab-1">
+        <div>
+            <h3>Fill in the form to add details of the College to the database.</h3>
+            <form>
+            <div class="container d-flex align-items-center justify-content-center">
+            <hr>
+              <table>
+             <tr>
+            <td align="right">Add Course    :   </td>
+                 <td align="left">
+              <select id="course" name="course">
+              <option value="chem">Chemical Engineering</option>
+              <option value="civil">Civil Engineering</option>
+              <option value="cse">Computer Science and Engineering</option>
+              <option value="eee">Electrical and Electronic Engineering</option>
+              <option value="ece">Electronics and Communications Engineering</option>
+            </select>
+                 </td>
+             </tr>
+
+             <tr>
+            <td align="right">Add Fee Structure     : </td>
+                 <td align="left">
+            <input name="fee" placeholder="Enter the fee" required type="text">
+                 </td>
+             </tr>
+        <br>
+             <tr>
+            <td align="right">Add Seats available   :  </td>
+                 <td align="left">
+            <input name="seats" placeholder="Enter the seats available" required type="text">
+                 </td>
+             </tr>
+
+                 </table>
+        <br /><hr>
+            <p>By creating additions to the details, changes will be visible to the student's portal.</p>
+        <br />
+            <button class=".text-center" id="g-btn" type="submit">Add Details</button>
+          </div>
+        </form>
+        </div>
+		</section>
+
+		<section class="tab-content hide" id="tab-2">
+			<div>
+                <h2 class="tabsTitle">View Students who applied for admission</h2>
+      <table>
+          <tr>
+              <th>CAMS ID</th>
+              <th>Email</th>
+              <th>Stream</th>
+              <th>Marks scored</th>
+              <th>Cut-Off for the Stream</th>
+              <th>Applied for Admission</th>
+              <th>Accept/Remove</th>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+      </table>
+			</div>
+		</section>
+		<section class="tab-content hide" id="tab-4">
+			<div>
+				Content in tab 3
+			</div>
+		</section>
+        <section class="tab-content hide" id="tab-3">
+        <div class="center">
+            <h2>CutOff Details</h2>
+            <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+            <div class="row">
+            <label><input name="type" type="radio" value="1">Add New Branch</label>
+            <label><input name="type" type="radio" value="2">Choose existing Branch</label>
+            </div>
+
+           <div class="new" style="display: grid;">
+              <div style="height: auto;width: 500px;margin: 0 auto">
+              <div class="row" style="display:flex;align-items: baseline; margin-left: 8px;">
+                    <h4>Add branch</h4>
+                    <input name="name" type="text">
+              </div>
+              <div class="row" style="display:flex;align-items: baseline;">
+                    <h4>Current cut-off</h4>
+                    <input name="name" type="text">
+              </div>
+              <div class="row" style="display:flex;align-items: baseline;">
+                    <h4>Previous Year</h4>
+                    <input name="name" type="text">
+              </div>
+              <div class="row" style="display:flex;align-items: baseline;">
+                    <h4>2 years back</h4>
+                    <input name="name" type="text">
+              </div>
+
+
+              </div>
+<!--              <div class="col-xs-6 .col-sm-4" style="margin-top: 5px;">-->
+<!--                    <input type="text" name="name">-->
+<!--                    <input type="text" name="name">-->
+<!--                    <input type="text" name="name">-->
+<!--                    <input type="text" name="name">-->
+<!--              </div>-->
+              </div>
+           </div>
+            <div class="exist">
+                <p><label><b>Choose Branch </b>
+                <select id="SelectedCourse" name="course">
+                    <option selected="selected">--Choose Branch from below--</option>
+                    <option value="chem">Chemical Engineering</option>
+                    <option value="civil">Civil Engineering</option>
+                    <option value="cse">Computer Science and Engineering</option>
+                    <option value="eee">Electrical and Electronic Engineering</option>
+                    <option value="ece">Electronics and Communications Engineering</option>
+                </select></label></p>
+                <p><lable><b>Current cut-off </b><input name="name" type="text"></lable></p>
+                <p><lable><b>Previous Year </b><input name="name" type="text"></lable></p>
+                <p><lable><b>2 years back </b><input name="name" type="text"></lable></p>
+             </div>
+
+        </div>
+        <div class="center">
+            <button class="button">Apply Changes</button>
+        </div>
+    </section>
+	</body>
+</html>
+
+<script>
+	$(document).ready(function() {
+		$('.nav-tabs > li > a').click(function(event){
+		event.preventDefault();//stop browser to take action for clicked anchor
+
+		//get displaying tab content jQuery selector
+		var active_tab_selector = $('.nav-tabs > li.active > a').attr('href');
+
+		//find actived navigation and remove 'active' css
+		var actived_nav = $('.nav-tabs > li.active');
+		actived_nav.removeClass('active');
+
+		//add 'active' css into clicked navigation
+		$(this).parents('li').addClass('active');
+
+		//hide displaying tab content
+		$(active_tab_selector).removeClass('active');
+		$(active_tab_selector).addClass('hide');
+
+		//show target tab content
+		var target_tab_selector = $(this).attr('href');
+		$(target_tab_selector).removeClass('hide');
+		$(target_tab_selector).addClass('active');
+	     });
+	  });
+	  $('input[name="type"]').on('change', function() {
+    $('.exist')
+      .toggle(+this.value === 2 && this.checked);
+    $('.new')
+      .toggle(+this.value==1 && this.checked);
+}).change();
+
+ $('input[name="type"]').on('change', function() {
+    $('.exist')
+      .toggle(+this.value === 2 && this.checked);
+    $('.new')
+      .toggle(+this.value==1 && this.checked);
+}).change();
+
+</script>
