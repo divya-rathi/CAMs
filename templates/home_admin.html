@@ -10,10 +10,11 @@
 
 </head>
 
-  <li class="name">CAMs</li>
-<div class="has-text-left "><h2 class="is-size-5">Welcome {{u}} :)</h2>
-    <li class="signout"><a href="{{url_for('logout')}}"><i class="fa  fa-sign-out"></i>Sign Out</a></li>
-</div>
+  <h2 class="name">CAMs</h2>
+    <div class="has-text-left ">
+        <h2 class="is-size-5">Welcome {{u}} :)</h2>
+        <li class="signout" style="list-style-type: none;"><a href="{{url_for('logout')}}"><i class="fa  fa-sign-out"></i>Sign Out</a></li>
+    </div>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
 <style>
 /*style nav bar*/
@@ -226,6 +227,7 @@ input[type=submit] {
 margin: 0;
 float: right;
 padding-right: 10px;
+font-size: 24px;
 }
 
 </style>
@@ -314,7 +316,7 @@ padding-right: 10px;
     {%if form != None %}
           {% for k,v in form.items() %}
           <tr>
-              {% if v['Status'] != 'Accepted' %}
+              {% if v['Status'] != 'Accepted' and v['Status'] != 'Rejected' %}
               <td scope="row">{{k}}</td>
               <td scope="row">{{v['EmailId']}}</td>
               <td class="row">{{v['BranchChosen']}}</td>
@@ -347,6 +349,7 @@ padding-right: 10px;
                     {%if form != None %}
           {% for k,v in form.items() %}
           <tr>
+              {% if v['Status'] == 'Accepted' %}
               <td scope="row">{{k}}</td>
               <td scope="row">{{v['EmailId']}}</td>
               <td class="row">{{v['BranchChosen']}}</td>
@@ -356,7 +359,8 @@ padding-right: 10px;
               <td class="row">{{v1['Current']}}</td>
               {% endif %}
               {% endfor %}
-                    </tr>
+              {% endif %}
+          </tr>
           {% endfor %}
           {% endif %}
                 </table>
