@@ -102,6 +102,9 @@ td,th {
 td {
     text-align: center;
 }
+th{
+    text-align: center
+}
 
 tr:nth-child(even) {
     background-color: #eee;
@@ -126,6 +129,70 @@ table {
     border: 2px solid rgb(200, 200, 200);
     letter-spacing: 1px;
     font-family: sans-serif;
+}
+.cutcontainer {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+    input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.cutrow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
 }
 </style>
 </head>
@@ -154,7 +221,7 @@ table {
     <hr>
       <table>
      <tr>
-    <td align="right">Add Course    :   </td>
+      <td align="right">Add Course    :   </td>
          <td align="left">
       <select id="course" name="course">
       <option value="chem">Chemical Engineering</option>
@@ -162,7 +229,7 @@ table {
       <option value="cse">Computer Science and Engineering</option>
       <option value="eee">Electrical and Electronic Engineering</option>
       <option value="ece">Electronics and Communications Engineering</option>
-    </select>
+       </select>
          </td>
      </tr>
 
@@ -193,7 +260,7 @@ table {
 		<section id="tab-2" class="tab-content hide">
 			<div>
                 <h2 class="tabsTitle">View Students who applied for admission</h2>
-      <table>
+      <table class="container d-flex align-items-center justify-content-center">
           <tr>
               <th>CAMS ID</th>
               <th>Email</th>
@@ -216,54 +283,131 @@ table {
 
       </table>
 			</div>
+
 		</section>
 		<section class="tab-content hide" id="tab-4">
-			<div class="container d-flex align-items-center justify-content-center">
-				<table>
+			<div>
+                <h2 class="tabsTitle">View Students who applied for admission</h2>
+				<table class="container d-flex align-items-center justify-content-center">
                     <tr>
                         <th scope="col">IdNo.</th>
                         <th scope="col">Name</th>
                         <th scope="col">Email</th>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td scope="row">CB.EN.U4CSE17416</td>
+                        <td scope="row">Divya</td>
+                        <td scope="row">divya@gmail.com</td>
+                    </tr>
+                     <tr>
+                        <td scope="row">CB.EN.U4CSE17420</td>
+                        <td scope="row">Gayathri</td>
+                        <td scope="row">gayathri@gmail.com</td>
                     </tr>
                 </table>
 			</div>
 		</section>
  <section class="tab-content hide" id="tab-3">
-        <div class="center">
+        <div>
             <h2>CutOff Details</h2>
             <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-            <label><input name="type" type="radio" value="1">Add New Branch</label>
-            <label><input name="type" type="radio" value="2">Choose existing Branch</label>
-           <div class="new">
-              <p><lable><b>Add Branch   </b><input name="name" type="text"></lable></p>
-              <p><lable><b>Current cut-off </b><input name="name" type="text"></lable></p>
-              <p><lable><b>Previous Year </b><input name="name" type="text"></lable></p>
-              <p><lable><b>2 years back </b><input name="name" type="text"></lable></p>
+            <div class="center">
+            <label><input name="type" type="radio" value="1">Add New Branch </label>
+            <label><input name="type" type="radio" value="2">Choose existing Branch </label></div>
+           <div class="new center">
+<div class="cutcontainer">
+    <div class="cutrow">
+      <div class="col-25">
+        <label for="SelecCourse">Choose Branch</label>
+      </div>
+      <div class="col-75">
+        <input id="SelectCourse" name="Selected Course" placeholder="Course Name" type="text">
+      </div>
+    </div>
+
+    <div class="cutrow">
+      <div class="col-25">
+        <label for="curcut">Current CutOff</label>
+      </div>
+      <div class="col-75">
+        <input id="curcut" name="Current CutOff" placeholder="Current year CutOff" type="text">
+      </div>
+    </div>
+
+    <div class="cutrow">
+      <div class="col-25">
+        <label for="PreCut">Previous Year</label>
+      </div>
+      <div class="col-75">
+        <input id="PreCut" name="PreCut" placeholder="Previous Year CutOff" type="text">
+      </div>
+    </div>
+
+    <div class="cutrow">
+      <div class="col-25">
+        <label for="2yrback">2 Years Back</label>
+      </div>
+      <div class="col-75">
+        <input id="2yrback" name="2yrcut" placeholder="2 Years CutOff" type="text">
+      </div>
+    </div>
+
+    <div class="cutrow">
+     <button class="registerbtn" type="submit">apply changes</button>
+    </div>
+</div>
            </div>
-            <div class="exist">
-                <p><lable><b>Choose Branch </b>
-                <select id="SelectedCourse" name="course">
+            <div class="exist center">
+<div class="cutcontainer">
+    <div class="cutrow">
+      <div class="col-25">
+        <label for="SelecCourse">Choose Branch</label>
+      </div>
+      <div class="col-75">
+        <select id="SelecCourse" name="course">
                     <option selected="selected">--Choose Branch from below--</option>
                     <option value="chem">Chemical Engineering</option>
                     <option value="civil">Civil Engineering</option>
                     <option value="cse">Computer Science and Engineering</option>
                     <option value="eee">Electrical and Electronic Engineering</option>
                     <option value="ece">Electronics and Communications Engineering</option>
-                </select></lable></p>
-                <p><lable><b>Current cut-off </b><input name="name" type="text"></lable></p>
-                <p><lable><b>Previous Year </b><input name="name" type="text"></lable></p>
-                <p><lable><b>2 years back </b><input name="name" type="text"></lable></p>
-             </div>
+        </select>
+      </div>
+    </div>
 
-        </div>
-        <div class="center">
-            <button class="button">Apply Changes</button>
+    <div class="cutrow">
+      <div class="col-25">
+        <label for="curcut">Current CutOff</label>
+      </div>
+      <div class="col-75">
+        <input id="curcut" name="Current CutOff" placeholder="Current year CutOff" type="text">
+      </div>
+    </div>
+
+    <div class="cutrow">
+      <div class="col-25">
+        <label for="PreCut">Previous Year</label>
+      </div>
+      <div class="col-75">
+        <input id="PreCut" name="PreCut" placeholder="Previous Year CutOff" type="text">
+      </div>
+    </div>
+
+    <div class="cutrow">
+      <div class="col-25">
+        <label for="2yrback">2 Years Back</label>
+      </div>
+      <div class="col-75">
+        <input id="2yrback" name="2yrcut" placeholder="2 Years CutOff" type="text">
+      </div>
+    </div>
+
+    <div class="cutrow">
+     <button class="registerbtn" type="submit">apply changes</button>
+    </div>
+</div>
+
         </div>
     </section>
 	</body>
