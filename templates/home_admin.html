@@ -11,7 +11,7 @@
 <nav>
     <p class="has-text-centered" >Navbar here</p>
 </nav>
-<div class="has-text-left "><h2 class="is-size-2" style="color:white;">Welcome {{u}} :)</h2>
+<div class="has-text-left "><h2 class="is-size-5">Welcome {{u}} :)</h2>
 </div>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
 <style>
@@ -215,6 +215,7 @@ input[type=submit] {
 </style>
 </head>
 	<body>
+    <form action="http://127.0.0.1:5000/home_admin" method="POST">
 		<div>
 			<ul class="nav nav-tabs">
 				<li class="active">
@@ -234,7 +235,6 @@ input[type=submit] {
 		<section id="tab-1" class="tab-content active">
                 <div>
   <h3 class="greenh2">Fill in the form to add details of the College to the database.</h3>
-<form>
 <div class="addcontainer">
     <div class="cutrow">
       <div class="col-25">
@@ -243,7 +243,7 @@ input[type=submit] {
       <div class="col-25">
         <select id="course" name="course">
             <option value="">--Choose a Branch--</option>
-            {% for course in cf %}
+            {% for course in cutoff.keys() %}
             <option value="{{sub}}">{{course}}</option>
             {% endfor %}
        </select>
@@ -278,13 +278,12 @@ input[type=submit] {
         <button class=".text-center" id="g-btn" type="submit">Add Details</button></div>
     </div>
 </div>
-</form>
 			    </div>
         </section>
 
 		<section id="tab-2" class="tab-content hide">
 			<div>
-                <h2 class="greenh2">View Students who applied for admission</h2>
+                <h2 class="greenh2">View/Accept/Remove Students who applied for admission</h2>
       <table class="container d-flex align-items-center justify-content-center">
           <tr>
               <th scope="col">CAMS ID</th>
@@ -341,7 +340,6 @@ input[type=submit] {
                 <label><input name="type" type="radio" value="1"><p>Add New Branch </p></label>
                 <label><input name="type" type="radio" value="2"><p>Choose existing Branch </p></label></div>
             <div class="new center">
-                <form>
 <div class="cutcontainer">
     <div class="cutrow">
       <div class="col-25">
@@ -383,10 +381,8 @@ input[type=submit] {
      <button class="applybtn" type="submit">apply changes</button>
     </div>
 </div>
-                </form>
            </div>
             <div class="exist center">
-                <form>
 <div class="cutcontainer">
     <div class="cutrow">
       <div class="col-25">
@@ -395,7 +391,7 @@ input[type=submit] {
       <div class="col-75">
         <select id="SelecCourse" name="course" required>
                     <option selected="selected">--Choose Branch from below--</option>
-            {% for course in cf %}
+            {% for course in cutoff.keys() %}
             <option value="{{sub}}">{{course}}</option>
             {% endfor %}
         </select>
@@ -434,11 +430,10 @@ input[type=submit] {
     </div>
 
 </div>
-                </form>
-
         </div>
         </div>
     </section>
+    </form>
 	</body>
 </html>
 
