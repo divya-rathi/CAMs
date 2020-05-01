@@ -32,6 +32,7 @@ def home():
     global active
     return render_template('home.html', u= active, cf = cutoff)
 
+
 @app.route('/login', methods=['POST', 'GET'])
 def login():
     if request.method == 'POST':
@@ -49,7 +50,7 @@ def login():
                     return render_template('home_admin.html', u = active, cutoff = cutoff, form = applications)
                 else:
                     print("logged")
-                    return render_template('home.html', u = active, cf = cutoff)
+                    return redirect("/")
 
         if temp == -1:
             return render_template('login.html', msg = "Invalid Credentials")
