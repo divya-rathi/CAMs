@@ -304,7 +304,7 @@ input[type=submit] {
               <td class="row">{{v1['Current']}}</td>
               {% endif %}
               {% endfor %}
-              <td class="row"><a>Accept</a>    <a>Remove</a></td>
+              <td class="row"><a>Accept</a>    <a href="{{url_for('removeStud', d_id=k)}}">Remove</a></td>
           </tr>
           {% endfor %}
 

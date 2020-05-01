@@ -87,6 +87,7 @@ def register():
 @app.route('/home_admin',methods=['POST','GET'])
 def home_admin():
     global active
+
     if request.method == 'POST':
         choose = request.form['tab']
         if choose == 'Add College Details':
@@ -98,6 +99,13 @@ def home_admin():
         if choose == 'View Final Selected Students':
             print('works')
     return render_template('home_admin.html')
+
+@app.route('/removeStud/<string:d_id>',methods=['POST','GET'])
+def removeStud(d_id):
+    #print(d_id)
+    db.child("application").child(d_id).remove()
+    applications = firebase.get('/application', None)
+    return render_template('home_admin.html', u = active, cutoff = cutoff, form = applications)
 
 @app.route('/application',methods=['POST', 'GET'])
 def application():
