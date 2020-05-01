@@ -14,7 +14,7 @@ global active,credentials
 #Firebase
 from firebase import firebase
 firebase = firebase.FirebaseApplication('https://cams-da440.firebaseio.com/', None)
-credentials = firebase.get('/credentials', None)
+credentials = firebase.get('/application', None)
 print(credentials)
 #db.child("credentials").child("CAMS0000").push({"EmailId":"admin@gmail.com" , "Password": "admin@123"})
 # userId = "CAMS"
