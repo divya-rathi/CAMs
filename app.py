@@ -104,6 +104,7 @@ def removeStud(d_id):
     #print(d_id)
     db.child("application").child(d_id).update({'Status': 'Rejected'})
     applications = firebase.get('/application', None)
+    cutoff = firebase.get('/Cutoff', None)
     return render_template('home_admin.html', u = active, cutoff = cutoff, form = applications)
 
 @app.route('/addStud/<string:d_id>',methods=['POST','GET'])
@@ -111,12 +112,14 @@ def addStud(d_id):
     #print(d_id)
     db.child("application").child(d_id).update({'Status': 'Accepted'})
     applications = firebase.get('/application', None)
+    cutoff = firebase.get('/Cutoff', None)
     return render_template('home_admin.html', u = active, cutoff = cutoff, form = applications)
 
 @app.route('/application',methods=['POST', 'GET'])
 def application():
     global active
-    print(active)
+    cutoff = firebase.get('/Cutoff', None)
+    credentials = firebase.get('/credentials', None)
     if active != None:
         for i in credentials:
             if active in credentials[i]['EmailId']:
@@ -138,7 +141,9 @@ def application():
 
 @app.route('/dashboard',methods=['POST', 'GET'])
 def dashboard():
+    cutoff = firebase.get('/Cutoff', None)
     applications = firebase.get('/application', None)
+    credentials = firebase.get('/credentials', None)
     global active
     if active == 'admin@gmail.com':  ##admin
         return render_template('home_admin.html', u = active, cutoff = cutoff, form = applications)
